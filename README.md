@@ -22,5 +22,11 @@ Easy guides for content authors making changes to Liferay.com
 
 *See them live at the [external site](http://ryanschuhler.github.io/lrdcom-recipes/)*
 
-##Seeing Changes Locally
+## Seeing Changes Locally
 If you want to see changes locally before pushing to live, run `python -m SimpleHTTPServer` on the root and head to `localhost:8000`
+
+## To Do Feature List
+- images integration
+- dynamic building nav
+- integrate into process
+- get intitial content up there

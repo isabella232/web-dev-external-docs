@@ -1,15 +1,17 @@
 // Include gulp & gulp plugins
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var directoryMap = require("gulp-directory-map");
-var fileinclude = require('gulp-file-include');
-var markdown = require('gulp-markdown');
-var minify = require('gulp-minify');
-var prettify = require('gulp-html-prettify');
-var livereload = require('gulp-livereload');
-var runSequence = require('run-sequence');
-var sass = require('gulp-ruby-sass');
-var connect = require('gulp-connect');
+const concat = require('gulp-concat');
+const connect = require('gulp-connect');
+const directoryMap = require("gulp-directory-map");
+const fileinclude = require('gulp-file-include');
+const flatten = require('gulp-flatten');
+const gulp = require('gulp');
+const livereload = require('gulp-livereload');
+const markdown = require('gulp-markdown');
+const minify = require('gulp-minify');
+const prettify = require('gulp-html-prettify');
+const replace = require('gulp-replace');
+const runSequence = require('run-sequence');
+const sass = require('gulp-ruby-sass');
 
 // Compile SASS
 gulp.task('sass', function() {
@@ -80,10 +82,23 @@ gulp.task('buildNavigationIndex', function() {
 // Turn markdown files into HTML
 gulp.task('markdown', function() {
     return gulp.src('documentation/**/*.md')
+        .pipe(replace('src="', 'src="src/pages/assets/'))
         .pipe(markdown())
         .pipe(prettify({indent_char: ' ', indent_size: 4}))
         .pipe(gulp.dest('src/pages'));
 });
+
+// Move doc assets e.g. images to HTML section
+gulp.task('doc-assets', function() {
+    return gulp.src(['documentation/**/*.png', 'documentation/**/*.jpg'])
+        .pipe(flatten())
+        .pipe(gulp.dest('src/pages/assets/'))
+})
+
+// doc master function
+gulp.task('docs', function() {
+    runSequence('markdown', 'doc-assets');
+})
 
 // build our search index
 gulp.task('buildindex', function() {
@@ -139,7 +154,7 @@ gulp.task('watch', function() {
     // Watch .md files
     gulp.watch('documentation/**/*.md', function(callback) {
         runSequence(
-            'markdown', 
+            'docs', 
             'buildNavigationIndex',
             'refresh'
         );
@@ -150,7 +165,7 @@ gulp.task('default', function(callback) {
     runSequence(
         'scripts',
         'sass',
-        'markdown',
+        'docs',
         'buildindex',
         'buildNavigationIndex',
         'watch',

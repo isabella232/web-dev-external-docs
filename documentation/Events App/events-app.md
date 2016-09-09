@@ -13,8 +13,15 @@ The following menu items are shown:
 - Maps or Activities, if Event Connect disabled
 - Gallery
 
-Here is how the menu looks with EventConnect enabled
-![front with event connect](/lrdcom-recipes/src/images/eventsapp_menu_eventconnect.png "Front Screen with EventConnect enabled")
+Here is how the menu looks with EventConnect enabled:
 
-Here is how the menu looks with EventConnect disabled
-![front with event connect](/lrdcom-recipes/src/images/eventsapp_menu_noeventconnect.png "Front Screen with EventConnect disabled")
+<div class="text-center">
+    <img src="eventsapp_menu_eventconnect.png">
+</div>
+
+Here is how the menu looks with EventConnect disabled:
+
+<div class="text-center">
+    <img src="eventsapp_menu_noeventconnect.png">
+</div>
+qw
