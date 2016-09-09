@@ -42,8 +42,10 @@
     <div id="wrapper">
         <!-- Header -->
         <div ng-include="'src/templates/header.html'"></div>
+
         <!-- Search Bar -->
         <div ng-include="'src/app/modules/search/search.view.html'"></div>
+
         <!-- Main -->
         <div id="main">
             <div class="inner">
@@ -52,19 +54,16 @@
                 </div>
             </div>
         </div>
+
         <!-- Bottom Nav -->
         <div ng-include="'src/templates/bottom-nav.html'"></div>
+
         <!-- Footer -->
-        <footer id="footer">
-            <div class="inner">
-                <ul class="copyright">
-                    <li>&copy; 2016 Liferay.com. All rights reserved</li>
-                    <li>Site hosted on <a href="https://github.com/ryanschuhler/lrdcom-recipes">GitHub</a></li>
-                </ul>
-            </div>
-        </footer>
+        <div ng-include="'src/templates/footer.html'"></div>
+
     </div>
-    <!--  <script crossorigin="anonymous" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+    
+    <!-- our app -->
     <script src="src/app.min.js"></script>
 </body>
 
