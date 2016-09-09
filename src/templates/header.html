@@ -28,6 +28,7 @@
     </div>
 
     <pageslide ps-open="checked" onclose="closeMenu">
+        <!-- <div ng-include="'src/app/modules/nav/nav.view.html'"></div> -->
         <nav class="menu z10">
             <ul>
                 <li class="category">General</li>
@@ -57,15 +58,6 @@
                     </ul>
                 </li>
             </ul>
-
-          <!--   <ul ng-repeat="categories in data">
-                <li>
-                    {{categories}}
-                    <ul ng-repeat="pages in categories">
-                        <li><a ui-sref="{{pages[0]}}">{{pages}}</a></li>
-                    </ul>
-                </li>
-            </ul> -->
         </nav>
     </pageslide>
 </header>

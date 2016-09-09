@@ -15,13 +15,12 @@ The following menu items are shown:
 
 Here is how the menu looks with EventConnect enabled:
 
-<div class="text-center">
+<div class="standard-padding-vertical text-center">
     <img src="eventsapp_menu_eventconnect.png">
 </div>
 
 Here is how the menu looks with EventConnect disabled:
 
-<div class="text-center">
+<div class="standard-padding-vertical text-center">
     <img src="eventsapp_menu_noeventconnect.png">
 </div>
-qw

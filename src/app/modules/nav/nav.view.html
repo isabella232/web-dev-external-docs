@@ -1,3 +1,11 @@
-<div ng-controller="navController">
-   
-</div>
+<nav class="menu z10" ng-controller="navController">
+      <ul ng-repeat="categories in navStructure">
+            <li>
+                {{categories}}
+                <ul ng-repeat="pages in categories">
+                    <li><a ui-sref="{{pages[0]}}">{{pages}}</a></li>
+                </ul>
+            </li>
+        </ul>
+   this is a dynamic nav
+</nav>

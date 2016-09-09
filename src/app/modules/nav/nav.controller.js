@@ -11,6 +11,7 @@ navigation.controller('navController', function($scope, $http, hotkeys) {
 
     $http.get('src/app/modules/nav/navigation.json')
         .then(function(res) {
-            $scope.data = res.data;
+            $scope.navStructure = res.data;
+            console.log($scope.navStructure)
         });
 });
