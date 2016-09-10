@@ -9,9 +9,8 @@ Easy guides for content authors making changes to Liferay.com
 3. [Seeing Changes Locally](#seeing-changes-locally)
 
 #### Setting Up
-1. Run `gem install sass` to install [SASS](http://sass-lang.com/install) on computer 
-2. Run `npm install` on the root to install all dependencies. 
-3. Run `gulp`. 
+1. Run `npm install` on the root to install all dependencies. 
+2. Run `gulp`. 
 
 *It's now watching for changes.*
 
@@ -28,5 +27,6 @@ If you want to see changes locally before pushing to live, run `python -m Simple
 #### To Do Feature List
 - <del>images integration</del>
 - dynamic building nav
+- swap to gulp sass to reduce dependencies.
 - integrate into process
 - get intitial content up there

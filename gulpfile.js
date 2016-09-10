@@ -11,11 +11,12 @@ const minify = require('gulp-minify');
 const prettify = require('gulp-html-prettify');
 const replace = require('gulp-replace');
 const runSequence = require('run-sequence');
-const sass = require('gulp-ruby-sass');
+const sass = require('gulp-sass');
 
 // Compile SASS
 gulp.task('sass', function() {
-    return sass('src/css/**/*.scss', { style: 'compressed' })
+    return gulp.src('src/css/**/*.scss')
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(concat('app.min.css'))
         .pipe(gulp.dest('src/'))
 });
