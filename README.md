@@ -8,25 +8,25 @@ Easy guides for content authors making changes to Liferay.com
 2. [Creating/Updating Docs](#creating-updating-docs)
 3. [Seeing Changes Locally](#seeing-changes-locally)
 
-## Setting Up
+#### Setting Up
 1. Run `gem install sass` to install [SASS](http://sass-lang.com/install) on computer 
 2. Run `npm install` on the root to install all dependencies. 
 3. Run `gulp`. 
 
 *It's now watching for changes.*
 
-## Creating/Updating Docs
+#### Creating/Updating Docs
 1. Make sure gulp is running. See [Setting Up](#setting-up).
 2. Make changes in `/documentation`
 3. Add and push changes to git.
 
-*See them live at the [external site](http://ryanschuhler.github.io/lrdcom-recipes/)*
+To add images just use plain ol' HTML and put the images in the same directory as the file. `<img src="my-image-in-the-same-directory.jpg" />`
 
-## Seeing Changes Locally
+#### Seeing Changes Locally
 If you want to see changes locally before pushing to live, run `python -m SimpleHTTPServer` on the root and head to `localhost:8000`
 
-## To Do Feature List
-- images integration
+#### To Do Feature List
+- <del>images integration</del>
 - dynamic building nav
 - integrate into process
 - get intitial content up there
