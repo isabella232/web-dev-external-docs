@@ -48,6 +48,7 @@ gulp.task('scripts', function() {
 
             'src/app/services/stringUtils.js',
             'src/app/directives/app.directives.js',
+            'src/app/filters/app.filters.js',
 
                 // navigation
                 'src/app/modules/nav/nav.module.js',

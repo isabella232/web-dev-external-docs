@@ -1,14 +1,15 @@
 navigation.factory('navigationModel', function($http) {
 
+	var data = {};
+
     $http({
         method: 'GET',
-        url: 'src/js/ui/navigation/navigation.json'
+        url: 'src/app/modules/nav/navigation.json'
     }).then(function successCallback(response) {
-        console.log(response.data);
+        data.navigation = response.data;
     }, function errorCallback(response) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
+
     });
 
-
+    return data;
 });

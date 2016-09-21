@@ -1,4 +1,6 @@
-navigation.controller('navController', function($scope, $http, hotkeys) {
+navigation.controller('navController', function($scope, $http, stringUtils, hotkeys, runtimeStates, navigationModel) {
+    
+    $scope.navigationTree = navigationModel.navigation;
 
     $scope.toggleMenu = function() {
         $scope.checked = !$scope.checked;
@@ -9,9 +11,22 @@ navigation.controller('navController', function($scope, $http, hotkeys) {
         $('#wrapper').removeClass("diminish");
     };
 
-    $http.get('src/app/modules/nav/navigation.json')
-        .then(function(res) {
-            $scope.navStructure = res.data;
-            console.log($scope.navStructure)
-        });
+    // add states programatically
+    for (category in navigationModel.navigation) {
+    
+        if (!navigationModel.navigation.hasOwnProperty(category)) continue;
+
+        var obj = navigationModel.navigation[category];
+
+        for (page in obj) {
+            let pageName = stringUtils.removeFileName(page)
+    
+            runtimeStates.addState(pageName,
+                {
+                    url: '/' + pageName,
+                    templateUrl: 'src/pages/' + category + '/' + pageName + '.html'
+                }
+            );
+        }
+    }
 });

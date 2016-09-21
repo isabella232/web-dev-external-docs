@@ -29,29 +29,29 @@ lrdcom.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 	       }
 		})
 
-		.state('tickets', {
-			url: '/tickets',
-			templateUrl: 'src/pages/General/tickets.html'
-		})
+		// .state('tickets', {
+		// 	url: '/tickets',
+		// 	templateUrl: 'src/pages/General/tickets.html'
+		// })
 
-		.state('events-app', {
-			url: '/events-app',
-			templateUrl: 'src/pages/Events App/events-app.html'
-		})
+		// .state('events-app', {
+		// 	url: '/events-app',
+		// 	templateUrl: 'src/pages/Events App/events-app.html'
+		// })
 
-		.state('landing-page-creation', {
-			url: '/landing-page-creation',
-			templateUrl: 'src/pages/Digital Content Hub/landing-page-creation.html'
-		})
+		// .state('landing-page-creation', {
+		// 	url: '/landing-page-creation',
+		// 	templateUrl: 'src/pages/Digital Content Hub/landing-page-creation.html'
+		// })
 
-		.state('localization', {
-			url: '/localization',
-			templateUrl: 'src/pages/Updating Content/localization.html'
-		})
+		// .state('localization', {
+		// 	url: '/localization',
+		// 	templateUrl: 'src/pages/Updating Content/localization.html'
+		// })
 
-		.state('case-studies', {
-			url: '/case-studies',
-			templateUrl: 'src/pages/Updating Content/case-study.html'
-		});
+		// .state('case-studies', {
+		// 	url: '/case-studies',
+		// 	templateUrl: 'src/pages/Updating Content/case-study.html'
+		// });
 
 });

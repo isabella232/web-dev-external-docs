@@ -1,11 +1,12 @@
-<nav class="menu z10" ng-controller="navController">
-      <ul ng-repeat="categories in navStructure">
-            <li>
-                {{categories}}
-                <ul ng-repeat="pages in categories">
-                    <li><a ui-sref="{{pages[0]}}">{{pages}}</a></li>
-                </ul>
-            </li>
-        </ul>
-   this is a dynamic nav
-</nav>
+<div class="menu" ng-controller="navController">
+	<ul ng-repeat="(key, value) in navigationTree">
+		<li class="category">
+			{{key}}
+			<ul ng-repeat="(key, value) in value">
+				<li>
+					<a ui-sref="{{key | removeFileName}}">{{key | fileNametoTitle}}</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>

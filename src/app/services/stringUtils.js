@@ -13,6 +13,12 @@ lrdcom.factory('stringUtils', function() {
 			txt.innerHTML = html;
 			return txt.value;
 		},
+		fileNametoTitle: function(filename) {
+			
+			var noFileName = this.removeFileName(filename);
+			var noHyphens = this.replaceAll(noFileName, '-', ' ');
+			return this.toTitleCase(noHyphens);
+		},
 		nth_occurrence: function(string, char, nth) {
 			var first_index = string.indexOf(char);
 			var length_up_to_first_index = first_index + 1;
