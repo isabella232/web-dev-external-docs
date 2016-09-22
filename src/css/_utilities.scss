@@ -43,6 +43,10 @@
 	padding-top: 0;
 }
 
+.large-margin-bottom {
+	margin-bottom: $largeSpacing;
+}
+
 .large-padding {
 	padding: $largeSpacing;
 }
@@ -60,6 +64,10 @@
 .section-padding {
 	padding-bottom: 6em;
 	padding-top: 5em;
+}
+
+.small-margin-bottom {
+	margin-bottom: $smallSpacing;
 }
 
 .small-padding {
@@ -88,6 +96,10 @@
 .standard-padding-vertical {
 	padding-bottom: $standardSpacing;
 	padding-top: $standardSpacing;
+}
+
+.standard-margin-bottom {
+	margin-bottom: $standardSpacing;
 }
 
 

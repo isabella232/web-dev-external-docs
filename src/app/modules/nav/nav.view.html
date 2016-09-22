@@ -1,6 +1,10 @@
 <div ng-controller="navController">
+	<ul>
+		<li class="standard-margin-bottom"><a ui-sref="about">About</li>
+	</ul>
+
 	<ul ng-repeat="(key, value) in navigationTree">
-		<li class="category">
+		<li class="category standard-margin-bottom">
 			{{key}}
 			<ul ng-repeat="(key, value) in value">
 				<li>
