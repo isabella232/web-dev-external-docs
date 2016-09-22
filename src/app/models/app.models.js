@@ -1,4 +1,4 @@
-lrdcom.factory("docsModel", function($http, docsUtils, stringUtils) {
+lrdcom.factory("docsModel", function($http, $q, docsUtils, stringUtils) {
     var searchIndex = lunr(function() {
         this.ref('page');
         this.field('title');
@@ -8,17 +8,29 @@ lrdcom.factory("docsModel", function($http, docsUtils, stringUtils) {
     var docsStore = {};
     var docsTree = {};
 
+    var getDocsTree = function() {
+        return $http({
+            method: 'GET',
+            url: 'src/app/models/docsTree.json'
+        });
+    };
+
     var getDocsIndex = (function() {
         return $http({
             method: 'GET',
-            url: 'src/app/modules/nav/navigation.json'
+            url: 'src/app/models/docsTree.json'
         }).then(function(response) {
-            docsTree = response.data;
+            
+            // build document tree
+            for (var key in response.data) {
+                docsTree[key] = response.data[key];
+            }
 
-            for (var category in docsTree) {
-                if (!docsTree.hasOwnProperty(category)) continue;
+            // build search index and data store
+            for (var category in response.data) {
+                if (!response.data.hasOwnProperty(category)) continue;
 
-                var pages = docsTree[category];
+                var pages = response.data[category];
 
                 for (let page in pages) {
 					page = page.replace('md', 'html');
@@ -50,6 +62,7 @@ lrdcom.factory("docsModel", function($http, docsUtils, stringUtils) {
     })();
 
     return {
+        getDocsTree: getDocsTree,
     	getDocsIndex: getDocsIndex,
         searchIndex: searchIndex,
         docsStore: docsStore,

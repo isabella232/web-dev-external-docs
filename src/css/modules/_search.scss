@@ -1,7 +1,7 @@
 .search-container {
 	@extend .fill;
 	
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 1);
 	flex-direction: column;
 	flex-wrap: nowrap;
 	padding: 4em 0;
@@ -32,9 +32,12 @@
 		article {
 			background: rgba(255,255,255,0.05);
 			border: 1px solid rgba(255, 255, 255, 0.1);
+			color: rgba(255, 255, 255, 0.7);
 
 			&:hover {
-				border: 1px solid #207bf7;
+				border: 1px solid $primaryColor;
+				background: $primaryColor;
+				color: #fff;
 				cursor: pointer;
 			}
 

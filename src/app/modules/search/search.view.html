@@ -7,7 +7,7 @@
 	<div class="block-container search-results-container" >
 		<article class="standard-padding standard-margin-bottom" ng-repeat="result in searchResults" ui-sref="{{result.urlTitle}}" ng-click="toggleSearch('hide')">
 			<h2>{{result.title}}</h2>
-			<p>{{result.body | limitTo: 200}} ...</p>
+			<p>{{result.body | limitTo: 200}}...</p>
 			<p>URL: {{result.urlTitle}}</p>
 		</article>
 	</div>

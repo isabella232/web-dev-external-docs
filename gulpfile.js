@@ -76,9 +76,9 @@ gulp.task('buildNavigationIndex', function() {
         '!src/pages/404.html',
         ])
         .pipe(directoryMap({
-            filename: 'navigation.json'
+            filename: 'docsTree.json'
         }))
-        .pipe(gulp.dest('src/app/modules/nav/'));
+        .pipe(gulp.dest('src/app/models/'));
 });
 
 // Turn markdown files into HTML
