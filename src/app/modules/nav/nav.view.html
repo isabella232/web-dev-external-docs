@@ -4,7 +4,7 @@
 			{{key}}
 			<ul ng-repeat="(key, value) in value">
 				<li>
-					<a ui-sref="{{key | removeFileName}}">{{key | fileNametoTitle}}</a>
+					<a ng-click="closeMenu()" ui-sref="{{key | removeFileName}}">{{key | fileNametoTitle}}</a>
 				</li>
 			</ul>
 		</li>

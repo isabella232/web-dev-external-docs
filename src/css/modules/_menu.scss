@@ -1,11 +1,10 @@
 .menu {
 	background: #1c75b9;
-	padding: 3em;
 	height: 100vh;
 
 	ul {
 		padding: 0;
-		margin-bottom: 1em;
+		margin-bottom: 0em;
 
 		li {
 			color: #fff;
@@ -18,6 +17,7 @@
 				font-size: 1.2em;
 				font-weight: 500;
 				line-height: 1.5em;
+				margin-bottom: $standardSpacing;
 			}
 
 			a {

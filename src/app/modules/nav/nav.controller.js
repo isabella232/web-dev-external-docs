@@ -6,8 +6,6 @@ navigation.controller('navController', function($scope, stringUtils, hotkeys, ru
         // add data recieved about navigation structure in $scope
         $scope.navigationTree = data;
 
-
-
         // add states programatically
         for (var category in data) {
         
