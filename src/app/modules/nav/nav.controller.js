@@ -1,6 +1,32 @@
-navigation.controller('navController', function($scope, $http, stringUtils, hotkeys, runtimeStates, navigationModel) {
+navigation.controller('navController', function($scope, stringUtils, hotkeys, runtimeStates, navigationModel) {
     
-    $scope.navigationTree = navigationModel.navigation;
+    navigationModel.getNavigationStructure().success(function(data) {
+
+        var navigationTree = data;
+        // add data recieved about navigation structure in $scope
+        $scope.navigationTree = data;
+
+
+
+        // add states programatically
+        for (var category in data) {
+        
+            if (!data.hasOwnProperty(category)) continue;
+
+            var obj = data[category];
+
+            for (var page in obj) {
+                let pageName = stringUtils.removeFileName(page);
+        
+                runtimeStates.addState(pageName,
+                    {
+                        url: '/' + pageName,
+                        templateUrl: 'src/pages/' + category + '/' + pageName + '.html'
+                    }
+                );
+            }
+        }
+    });
 
     $scope.toggleMenu = function() {
         $scope.checked = !$scope.checked;
@@ -10,23 +36,4 @@ navigation.controller('navController', function($scope, $http, stringUtils, hotk
     $scope.closeMenu = function() {
         $('#wrapper').removeClass("diminish");
     };
-
-    // add states programatically
-    for (category in navigationModel.navigation) {
-    
-        if (!navigationModel.navigation.hasOwnProperty(category)) continue;
-
-        var obj = navigationModel.navigation[category];
-
-        for (page in obj) {
-            let pageName = stringUtils.removeFileName(page)
-    
-            runtimeStates.addState(pageName,
-                {
-                    url: '/' + pageName,
-                    templateUrl: 'src/pages/' + category + '/' + pageName + '.html'
-                }
-            );
-        }
-    }
 });
