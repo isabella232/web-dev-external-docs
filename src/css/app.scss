@@ -3,10 +3,10 @@
 @import 'variables';
 @import 'main';
 @import 'utilities';
-@import 'anim-in-out';
 
 // plugins
-@import 'angular-tooltips.min';
+@import 'vendor/angular-tooltips.min';
+@import 'vendor/anim-in-out';
 
 // modules
 @import 'modules/search';
