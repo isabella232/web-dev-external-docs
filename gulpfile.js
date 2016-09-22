@@ -41,19 +41,21 @@ gulp.task('scripts', function() {
             'node_modules/angular-hotkeys/build/hotkeys.min.js',
             'node_modules/angular-tooltips/dist/angular-tooltips.min.js',
 
-            // application level modules
+            // our application
             'src/app/app.module.js',
+            
+            // application model
+            'src/app/models/app.models.js',
+
+            // application modules
             'src/app/app.routes.js',
             'src/app/app.config.js',
-
             'src/app/services/stringUtils.js',
             'src/app/directives/app.directives.js',
             'src/app/filters/app.filters.js',
-            'src/app/models/app.models.js',
-
+            
                 // navigation
                 'src/app/modules/nav/nav.module.js',
-                'src/app/modules/nav/nav.model.js',
                 'src/app/modules/nav/nav.controller.js',
 
                 // search
