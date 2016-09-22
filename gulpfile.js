@@ -49,6 +49,7 @@ gulp.task('scripts', function() {
             'src/app/services/stringUtils.js',
             'src/app/directives/app.directives.js',
             'src/app/filters/app.filters.js',
+            'src/app/models/app.models.js',
 
                 // navigation
                 'src/app/modules/nav/nav.module.js',
@@ -57,7 +58,6 @@ gulp.task('scripts', function() {
 
                 // search
                 'src/app/modules/search/search.module.js',
-                'src/app/modules/search/search.model.js',
                 'src/app/modules/search/search.controller.js',
 
                 // background

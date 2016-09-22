@@ -1,4 +1,4 @@
-# Liferay Events App
+# Events App
 
 ## Front / Menu Screen
 

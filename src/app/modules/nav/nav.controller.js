@@ -11,12 +11,13 @@ navigation.controller('navController', function($scope, stringUtils, hotkeys, ru
         
             if (!data.hasOwnProperty(category)) continue;
 
-            var obj = data[category];
+            var pages = data[category];
 
-            for (var page in obj) {
+            for (var page in pages) {
                 let pageName = stringUtils.removeFileName(page);
-        
-                runtimeStates.addState(pageName,
+    
+                runtimeStates.addState(
+                    pageName,
                     {
                         url: '/' + pageName,
                         templateUrl: 'src/pages/' + category + '/' + pageName + '.html'

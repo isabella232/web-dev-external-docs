@@ -1,8 +1,8 @@
-search.controller("searchController", function($scope, searchModel, searchUtils, stringUtils, hotkeys) {
+search.controller("searchController", function($scope, docsModel, stringUtils, hotkeys) {
 	$scope.searchTerm = "";
 	$scope.searchResults = [];
-	$scope.searchIndex = searchModel.searchIndex;
-	$scope.store = searchModel.store;
+	$scope.searchIndex = docsModel.searchIndex;
+	$scope.docsStore = docsModel.docsStore;
 
 	$scope.toggleSearch = function(mode) {
         var $searchContainer = $('.search-container');
@@ -22,7 +22,6 @@ search.controller("searchController", function($scope, searchModel, searchUtils,
     };
 
     $scope.searchInputHandler = function(term, event) {
-    	console.log($scope.searchIndex)
 		if (event.key == "Escape") {
 			$scope.toggleSearch('hide');
 		} 
@@ -35,8 +34,11 @@ search.controller("searchController", function($scope, searchModel, searchUtils,
 		var resultsArray = $scope.searchIndex.search(term);
 			$scope.searchResults = [];
 
+		console.log($scope.docsStore)
+		console.log($scope.searchIndex)
+
 		resultsArray.map(function(result) {
-			$scope.searchResults.push($scope.store[result.ref]);	
+			$scope.searchResults.push($scope.docsStore[result.ref]);	
 		});		
 	};
 

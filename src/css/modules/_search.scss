@@ -7,14 +7,6 @@
 	padding: 4em 0;
 	transition: all 0.25s ease-in;
 
-	a {
-		color: rgba(255, 255, 255, 0.7);
-
-		&:hover {
-			color: rgba(255, 255, 255, 1);			
-		}
-	}
-
 	.search-input-container {
 		position: relative;
 		width: 70%;
@@ -34,21 +26,21 @@
 	}
 
 	.search-results-container {
-		padding: 2em 0;
 		text-align: left;
 		width: 70%;
 
 		article {
-			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-			margin-bottom: 1.5em;
+			background: rgba(255,255,255,0.05);
+			border: 1px solid rgba(255, 255, 255, 0.1);
 
 			&:hover {
-				border-bottom: 1px solid #EFFF39;
+				border: 1px solid #207bf7;
 				cursor: pointer;
 			}
 
 			p {
 				font-size: 0.8em;
+				margin-bottom: 0;
 			}
 		}
 	}
