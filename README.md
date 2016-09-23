@@ -26,7 +26,8 @@ If you want to see changes locally before pushing to live, run `python -m Simple
 
 #### To Do Feature List
 - <del>images integration</del>
-- dynamic building nav
-- swap to gulp sass to reduce dependencies.
+- <del>dynamic building nav</del>
+- <del>swap to gulp sass to reduce dependencies.</del>
+- search results navigate with keyboard
 - integrate into process
 - get intitial content up there

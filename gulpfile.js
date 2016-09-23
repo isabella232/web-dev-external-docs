@@ -86,7 +86,7 @@ gulp.task('buildNavigationIndex', function() {
 // Turn markdown files into HTML
 gulp.task('markdown', function() {
     return gulp.src('documentation/**/*.md')
-        .pipe(replace('src="', 'src="src/pages/assets/'))
+        .pipe(replace('img src="', 'img src="src/pages/assets/'))
         .pipe(markdown())
         .pipe(prettify({indent_char: ' ', indent_size: 4}))
         .pipe(gulp.dest('src/pages'));

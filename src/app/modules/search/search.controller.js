@@ -33,10 +33,7 @@ search.controller("searchController", function($scope, docsModel, stringUtils, h
 	$scope.getSearchResults = function(term, event) {
 		var resultsArray = $scope.searchIndex.search(term);
 			$scope.searchResults = [];
-
-		console.log($scope.docsStore)
-		console.log($scope.searchIndex)
-
+			
 		resultsArray.map(function(result) {
 			$scope.searchResults.push($scope.docsStore[result.ref]);	
 		});		
