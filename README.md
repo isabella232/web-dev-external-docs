@@ -10,7 +10,7 @@ Easy guides for content authors making changes to Liferay.com
 
 #### Setting Up
 1. Run `npm install` on the root to install all dependencies. 
-2. Run `gulp`. 
+2. Run `npm start` and head to `http://localhost:8000` 
 
 *It's now watching for changes.*
 
@@ -21,13 +21,5 @@ Easy guides for content authors making changes to Liferay.com
 
 To add images just use plain ol' HTML and put the images in the same directory as the file. `<img src="my-image-in-the-same-directory.jpg" />`
 
-#### Seeing Changes Locally
-If you want to see changes locally before pushing to live, run `python -m SimpleHTTPServer` on the root and head to `localhost:8000`
-
 #### To Do Feature List
-- <del>images integration</del>
-- <del>dynamic building nav</del>
-- <del>swap to gulp sass to reduce dependencies.</del>
-- search results navigate with keyboard
-- integrate into process
-- get intitial content up there
+Trello Board: https://trello.com/b/ft2uFMNq/lrdcom-external-docs
