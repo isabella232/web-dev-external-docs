@@ -33,7 +33,7 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-    "start": "concurrently \"python -m SimpleHTTPServer\" \"gulp\""
+    "start": "concurrently \"python -m SimpleHTTPServer\" \"gulp\" \"open http://localhost:8000\""
   },
   "repository": {
     "type": "git",
