@@ -37,15 +37,15 @@ a {
     text-decoration: none;
     color: #585858;
     border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
-}
 
-a.no-underline {
-    border-bottom: none;
-}
+    &.no-underline {
+        border-bottom: none;
+    }
 
-a:hover {
-    border-bottom-color: transparent;
-    color: #f2849e;
+    &:hover {
+        border-bottom-color: transparent;
+        color: #f2849e;
+    }
 }
 
 strong,
@@ -67,10 +67,9 @@ h1 {
     line-height: 1.3;
     margin: 0 0 1em 0;
     letter-spacing: -0.035em;
-}
-
-h1 a {
-    color: inherit;
+    a {
+        color: inherit;
+    }
 }
 
 @media screen and (max-width: 736px) {
@@ -112,14 +111,8 @@ h3 {
     font-size: 1em;
 }
 
-h4 {
-    font-size: 0.8em;
-}
-
-h5 {
-    font-size: 0.8em;
-}
-
+h4,
+h5,
 h6 {
     font-size: 0.8em;
 }
@@ -178,23 +171,21 @@ pre {
     font-family: "Courier New", monospace;
     font-size: 0.9em;
     margin: 0 0 2em 0;
-}
-
-pre code {
-    display: block;
-    line-height: 1.75;
-    padding: 1em 1.5em;
-    overflow-x: auto;
+    code {
+        display: block;
+        line-height: 1.75;
+        padding: 1em 1.5em;
+        overflow-x: auto;
+    }
 }
 
 hr {
     border: 0;
     border-bottom: solid 1px #c9c9c9;
     margin: 2em 0;
-}
-
-hr.major {
-    margin: 3em 0;
+    &.major {
+        margin: 3em 0;
+    }
 }
 
 .align-left {
@@ -209,160 +200,161 @@ hr.major {
     text-align: right;
 }
 
+
 /* List */
 
 ol {
     list-style: decimal;
     margin: 0 0 2em 0;
     padding-left: 1.25em;
-}
-
-ol li {
-    padding-left: 0.25em;
+    li {
+        padding-left: 0.25em;
+    }
 }
 
 ul {
     list-style: disc;
     margin: 0 0 2em 0;
     padding-left: 1em;
-}
 
-ul li {
-    padding-left: 0.5em;
-}
+    li {
+        padding-left: 0.5em;
+    }
 
-ul.alt {
-    list-style: none;
-    padding-left: 0;
-}
+    &.alt {
+        list-style: none;
+        padding-left: 0;
 
-ul.alt li {
-    border-top: solid 1px #c9c9c9;
-    padding: 0.5em 0;
-}
+        li {
+            border-top: solid 1px #c9c9c9;
+            padding: 0.5em 0;
+            &:first-child {
+                border-top: 0;
+                padding-top: 0;
+            }
+        }
+    }
 
-ul.alt li:first-child {
-    border-top: 0;
-    padding-top: 0;
-}
+    &.icons {
+        cursor: default;
+        list-style: none;
+        padding-left: 0;
+        margin: -1em 0 2em -1em;
 
-ul.icons {
-    cursor: default;
-    list-style: none;
-    padding-left: 0;
-    margin: -1em 0 2em -1em;
-}
+        li {
+            display: inline-block;
+            padding: 1em 0 0 1em;
+        }
+    }
 
-ul.icons li {
-    display: inline-block;
-    padding: 1em 0 0 1em;
-}
+    &.actions {
+        cursor: default;
+        list-style: none;
+        padding-left: 0;
 
-ul.actions {
-    cursor: default;
-    list-style: none;
-    padding-left: 0;
-}
+        li {
+            display: inline-block;
+            padding: 0 1em 0 0;
+            vertical-align: middle;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
 
-ul.actions li {
-    display: inline-block;
-    padding: 0 1em 0 0;
-    vertical-align: middle;
-}
+        &.small li {
+            padding: 0 0.5em 0 0;
+        }
 
-ul.actions li:last-child {
-    padding-right: 0;
-}
+        &.vertical {
+            li {
+                display: block;
+                padding: 1em 0 0 0;
 
-ul.actions.small li {
-    padding: 0 0.5em 0 0;
-}
+                &:first-child {
+                    padding-top: 0;
+                }
 
-ul.actions.vertical li {
-    display: block;
-    padding: 1em 0 0 0;
-}
+                > * {
+                    margin-bottom: 0;
+                }
+            }
 
-ul.actions.vertical li:first-child {
-    padding-top: 0;
-}
+            &.small li {
+                padding: 0.5em 0 0 0;
+                &:first-child {
+                    padding-top: 0;
+                }
+            }
+        }
 
-ul.actions.vertical li > * {
-    margin-bottom: 0;
-}
+        &.fit {
+            display: table;
+            margin-left: -1em;
+            padding: 0;
+            table-layout: fixed;
+            width: calc(100% + 1em);
 
-ul.actions.vertical.small li {
-    padding: 0.5em 0 0 0;
-}
+            li {
+                display: table-cell;
+                padding: 0 0 0 1em;
+                > * {
+                    margin-bottom: 0;
+                }
+            }
 
-ul.actions.vertical.small li:first-child {
-    padding-top: 0;
-}
-
-ul.actions.fit {
-    display: table;
-    margin-left: -1em;
-    padding: 0;
-    table-layout: fixed;
-    width: calc(100% + 1em);
-}
-
-ul.actions.fit li {
-    display: table-cell;
-    padding: 0 0 0 1em;
-}
-
-ul.actions.fit li > * {
-    margin-bottom: 0;
-}
-
-ul.actions.fit.small {
-    margin-left: -0.5em;
-    width: calc(100% + 0.5em);
-}
-
-ul.actions.fit.small li {
-    padding: 0 0 0 0.5em;
+            &.small {
+                margin-left: -0.5em;
+                width: calc(100% + 0.5em);
+                li {
+                    padding: 0 0 0 0.5em;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
     ul.actions {
         margin: 0 0 2em 0;
-    }
-    ul.actions li {
-        padding: 1em 0 0 0;
-        display: block;
-        text-align: center;
-        width: 100%;
-    }
-    ul.actions li:first-child {
-        padding-top: 0;
-    }
-    ul.actions li > * {
-        width: 100%;
-        margin: 0 !important;
-    }
-    ul.actions li > *.icon:before {
-        margin-left: -2em;
-    }
-    ul.actions.small li {
-        padding: 0.5em 0 0 0;
-    }
-    ul.actions.small li:first-child {
-        padding-top: 0;
+
+        li {
+            padding: 1em 0 0 0;
+            display: block;
+            text-align: center;
+            width: 100%;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            > * {
+                width: 100%;
+                margin: 0 !important;
+                &.icon:before {
+                    margin-left: -2em;
+                }
+            }
+        }
+
+        &.small li {
+            padding: 0.5em 0 0 0;
+            &:first-child {
+                padding-top: 0;
+            }
+        }
     }
 }
 
 dl {
     margin: 0 0 2em 0;
-}
 
-dl dt {
-    display: block;
-    font-weight: 900;
-    margin: 0 0 1em 0;
-}
+    dt {
+        display: block;
+        font-weight: 900;
+        margin: 0 0 1em 0;
+    }
 
-dl dd {
-    margin-left: 2em;
+    dd {
+        margin-left: 2em;
+    }
 }
