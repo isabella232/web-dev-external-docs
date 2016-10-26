@@ -1,12 +1,12 @@
 # Liferay.com Guide
 Easy guides for content authors making changes to Liferay.com
 
-*For adding docs to our [external site](http://ryanschuhler.github.io/lrdcom-recipes/)*
+*For adding docs to our [external site](https://liferay.github.io/web-dev-lrdcom/#/)*
 
 ## Table of Contents
 1. [Setting Up](#setting-up)
 2. [Creating/Updating Docs](#creating-updating-docs)
-3. [Seeing Changes Locally](#seeing-changes-locally)
+3. [To Do Feature List](#to-do-feature-list)
 
 #### Setting Up
 1. Run `npm install` on the root to install all dependencies. 
