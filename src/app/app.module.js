@@ -15,6 +15,6 @@ const lrdcom = angular.module(
 
 lrdcom.controller('mainController', function(docsModel, $scope, $rootScope, $state, stringUtils) {
     $rootScope.$on('$stateChangeError', function(event) {
-        console.log("404");
+
     });
 });

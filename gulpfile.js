@@ -72,108 +72,147 @@ gulp.task('scripts', function() {
 
 // Build navigation
 gulp.task('buildNavigationIndex', function() {
-    return gulp.src([
-        'documentation/**/*.md',
-        '!src/pages/home.html',
-        '!src/pages/404.html',
-        ])
-        .pipe(directoryMap({
-            filename: 'docsTree.json'
-        }))
+    return gulp.src(
+            [
+                'documentation/**/*.md',
+                '!src/pages/home.html',
+                '!src/pages/404.html',
+            ]
+        )
+        .pipe(directoryMap({filename: 'docsTree.json'}))
         .pipe(gulp.dest('src/app/models/'));
 });
 
 // Turn markdown files into HTML
-gulp.task('markdown', function() {
-    return gulp.src('documentation/**/*.md')
-        .pipe(replace('img src="', 'img src="src/pages/assets/'))
-        .pipe(markdown())
-        .pipe(prettify({indent_char: ' ', indent_size: 4}))
-        .pipe(gulp.dest('src/pages'));
-});
+gulp.task(
+    'markdown',
+    function() {
+        return gulp.src('documentation/**/*.md')
+            .pipe(replace('img src="', 'img src="src/pages/assets/'))
+            .pipe(markdown())
+            .pipe(prettify({indent_char: ' ', indent_size: 4}))
+            .pipe(gulp.dest('src/pages'));
+    }
+);
 
 // Move doc assets e.g. images to HTML section
-gulp.task('doc-assets', function() {
-    return gulp.src(['documentation/**/*.png', 'documentation/**/*.jpg'])
+gulp.task(
+    'doc-assets',
+    function() {
+        return gulp.src(['documentation/**/*.png', 'documentation/**/*.jpg'])
         .pipe(flatten())
         .pipe(gulp.dest('src/pages/assets/'))
-})
+    }
+);
 
 // doc master function
-gulp.task('docs', function() {
-    runSequence('markdown', 'doc-assets');
-})
+gulp.task(
+    'docs',
+    function() {
+        runSequence('markdown', 'doc-assets');
+    }
+)
 
 // build our search index
-gulp.task('buildindex', function() {
-    return gulp.src([
-            'src/pages/**/*.html',
-            '!src/pages/home.html',
-            '!src/pages/404.html',
-        ])
+gulp.task(
+    'buildindex',
+    function() {
+        return gulp.src(
+            [
+                'src/pages/**/*.html',
+                '!src/pages/home.html',
+                '!src/pages/404.html',
+            ]
+        )
         .pipe(concat('searchindex.html'))
         .pipe(gulp.dest('src/app/modules/search/'));
 });
 
-gulp.task('connect', function() {
-    connect.server({
-        livereload: true
-    });
-});
+gulp.task(
+    'connect',
+    function() {
+        connect.server(
+            {
+                livereload: true
+            }
+        );
+    }
+);
 
-gulp.task('refresh', function() {
-    return gulp.src([
-        'index.html'
-    ])
+gulp.task(
+    'refresh',
+    function() {
+        return gulp.src(
+            [
+                'index.html'
+            ]
+        )
     .pipe(connect.reload());
-})
+});
 
 // Watch for changes
-gulp.task('watch', function() {
+gulp.task(
+    'watch',
+    function() {
 
-    // Watch .html files
-    gulp.watch('src/**/*.html', function(callback) {
-        runSequence(
-            'buildindex',
-            'refresh'
+        // Watch .html files
+        gulp.watch(
+            'src/**/*.html',
+            function(callback) {
+                runSequence(
+                    'buildindex',
+                    'refresh'
+                );
+            }
         );
-    });
 
-    // Watch .js files
-    gulp.watch('src/**/*.js', function(callback) {
-        runSequence(
-           'scripts',
-           'refresh'
+        // Watch .js files
+        gulp.watch(
+            'src/**/*.js',
+            function(callback) {
+                runSequence(
+                   'scripts',
+                   'refresh'
+                );
+            }
         );
-    });
 
-    // Watch .scss files
-    gulp.watch('src/**/*.scss', function(callback) {
+        // Watch .scss files
+        gulp.watch(
+            'src/**/*.scss',
+            function(callback) {
+                runSequence(
+                    'sass',
+                    'refresh'
+                )
+            }
+        );
+
+        // Watch .md files
+        gulp.watch(
+            'documentation/**/*.md',
+            function(callback) {
+                runSequence(
+                    'docs',
+                    'buildNavigationIndex',
+                    'refresh'
+                );
+            }
+        );
+});
+
+gulp.task(
+    'default',
+    function(callback) {
         runSequence(
+            'scripts',
             'sass',
+            'docs',
+            'buildindex',
+            'buildNavigationIndex',
+            'watch',
+            'connect',
             'refresh'
         )
-    });
-
-    // Watch .md files
-    gulp.watch('documentation/**/*.md', function(callback) {
-        runSequence(
-            'docs',
-            'buildNavigationIndex',
-            'refresh'
-        );
-    });
-});
-
-gulp.task('default', function(callback) {
-    runSequence(
-        'scripts',
-        'sass',
-        'docs',
-        'buildindex',
-        'buildNavigationIndex',
-        'watch',
-        'connect',
-        'refresh'
-    )
-});
+    }
+);

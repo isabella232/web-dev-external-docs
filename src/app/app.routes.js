@@ -1,39 +1,45 @@
-lrdcom.config(function($stateProvider, $urlRouterProvider, $locationProvider, stringUtilsProvider) {
+lrdcom.config(
+	function($stateProvider, $urlRouterProvider, $locationProvider, stringUtilsProvider) {
+		$urlRouterProvider.otherwise('/');
 
-	$urlRouterProvider.otherwise('/');
+		$stateProvider
+			.state(
+				'home',
+				{
+					data: {
+						cssClassnames: 'page-home'
+					},
+					templateUrl: 'src/pages/home.html',
+					url: '/'
+				}
+			)
 
-	// $locationProvider.html5Mode({
- //        enabled: false,
- //        requireBase: false
- //    });
+			.state(
+				'404',
+				{
+					template: '<div>error</div>'
+				}
+			)
 
-	$stateProvider
-		.state('home', {
-			url: '/',
-			templateUrl: 'src/pages/home.html',
-			data : {
-	           cssClassnames : 'page-home'
-	       }
-		})
+			.state(
+				'about',
+				{
+					data: {
+						cssClassnames: 'about'
+					},
+					templateUrl: 'src/pages/about.html',
+					url: '/about'
+				}
+			)
 
-		.state('404', {
-		    // no url defined
-		    template: '<div>error</div>',
-		  })
-
-		.state('about', {
-			url: '/about',
-			templateUrl: 'src/pages/about.html',
-			data : {
-	           cssClassnames : 'about'
-	       }
-		})
-
-		.state('docs', {
-			url: '/docs/:doc',
-			templateUrl: function($stateParams) {
-				console.log($stateParams);
-				return 'src/pages/' + $stateParams.doc + '.html';
-			}
-		});
-});
+			.state(
+				'docs',
+				{
+					templateUrl: function($stateParams) {
+						return 'src/pages/' + $stateParams.doc + '.html';
+					},
+					url: '/docs/:doc'
+				}
+			);
+	}
+);
