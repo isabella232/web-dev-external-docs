@@ -1,4 +1,4 @@
-lrdcom.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+lrdcom.config(function($stateProvider, $urlRouterProvider, $locationProvider, stringUtilsProvider) {
 
 	$urlRouterProvider.otherwise('/');
 
@@ -35,5 +35,5 @@ lrdcom.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 				console.log($stateParams);
 				return 'src/pages/' + $stateParams.doc + '.html';
 			}
-		})
+		});
 });

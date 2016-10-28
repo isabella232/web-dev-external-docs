@@ -1,6 +1,7 @@
 navigation.controller('navController', function($scope, docsModel, stringUtils, hotkeys, runtimeStates) {
 
     $scope.navigationTree = docsModel.docsTree;
+    $scope.stringUtils = stringUtils;
 
     $scope.toggleMenu = function() {
         $scope.checked = !$scope.checked;

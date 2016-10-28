@@ -20,7 +20,7 @@ lrdcom.factory("docsModel", function($http, $q, docsUtils, stringUtils) {
             method: 'GET',
             url: 'src/app/models/docsTree.json'
         }).then(function(response) {
-            
+
             // build document tree
             for (var key in response.data) {
                 docsTree[key] = response.data[key];
@@ -30,7 +30,8 @@ lrdcom.factory("docsModel", function($http, $q, docsUtils, stringUtils) {
             for (var category in response.data) {
                 if (!response.data.hasOwnProperty(category)) continue;
 
-                var pages = response.data[category];
+                let pages = response.data[category];
+                let currentCategory = category;
 
                 for (let page in pages) {
 					page = page.replace('md', 'html');
@@ -46,12 +47,14 @@ lrdcom.factory("docsModel", function($http, $q, docsUtils, stringUtils) {
 
                         searchIndex.add({
                             body: currentBody,
+                            category: currentCategory,
                             page: currentPage,
                             title: currentPageTitle
                         });
 
                         docsStore[currentPage] = {
                             body: currentBody,
+                            category: currentCategory,
                             title: currentPageTitle,
                             urlTitle: currentPage
                         };

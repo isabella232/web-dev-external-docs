@@ -32,7 +32,7 @@ gulp.task('scripts', function() {
             'node_modules/lunr/lunr.min.js',
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/flexslider/jquery.flexslider-min.js',
-            
+
             // angular third party modules
             'node_modules/angular-ui-router/release/angular-ui-router.min.js',
             'node_modules/angular-ui-router-anim-in-out/anim-in-out.js',
@@ -43,17 +43,17 @@ gulp.task('scripts', function() {
 
             // our application
             'src/app/app.module.js',
-            
+
             // application model
             'src/app/models/app.models.js',
 
             // application modules
             'src/app/app.routes.js',
-            'src/app/app.config.js',
             'src/app/services/stringUtils.js',
+            'src/app/app.config.js',
             'src/app/directives/app.directives.js',
             'src/app/filters/app.filters.js',
-            
+
                 // navigation
                 'src/app/modules/nav/nav.module.js',
                 'src/app/modules/nav/nav.controller.js',
@@ -134,7 +134,7 @@ gulp.task('watch', function() {
     // Watch .html files
     gulp.watch('src/**/*.html', function(callback) {
         runSequence(
-            'buildindex', 
+            'buildindex',
             'refresh'
         );
     });
@@ -142,7 +142,7 @@ gulp.task('watch', function() {
     // Watch .js files
     gulp.watch('src/**/*.js', function(callback) {
         runSequence(
-           'scripts', 
+           'scripts',
            'refresh'
         );
     });
@@ -158,7 +158,7 @@ gulp.task('watch', function() {
     // Watch .md files
     gulp.watch('documentation/**/*.md', function(callback) {
         runSequence(
-            'docs', 
+            'docs',
             'buildNavigationIndex',
             'refresh'
         );

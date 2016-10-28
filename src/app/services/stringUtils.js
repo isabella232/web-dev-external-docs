@@ -14,10 +14,12 @@ lrdcom.factory('stringUtils', function() {
 			return txt.value;
 		},
 		fileNametoTitle: function(filename) {
-			
 			var noFileName = this.removeFileName(filename);
 			var noHyphens = this.replaceAll(noFileName, '-', ' ');
 			return this.toTitleCase(noHyphens);
+		},
+		hyphenate: function(string) {
+			return this.replaceAll(string.toLowerCase(), ' ', '-');
 		},
 		nth_occurrence: function(string, char, nth) {
 			var first_index = string.indexOf(char);
