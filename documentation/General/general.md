@@ -1,3 +1,3 @@
-# General Knowledge
+# General
 
-dropping knowledge
+some general knowledge about something
