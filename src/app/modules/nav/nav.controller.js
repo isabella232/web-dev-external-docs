@@ -1,4 +1,4 @@
-navigation.controller('navController', function($scope, docsModel, stringUtils, hotkeys, runtimeStates) {
+navigation.controller('navController', function($scope, docsModel, stringUtils, hotkeys) {
 
     $scope.navigationTree = docsModel.docsTree;
     $scope.stringUtils = stringUtils;
