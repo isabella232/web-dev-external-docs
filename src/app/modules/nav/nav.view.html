@@ -1,13 +1,13 @@
-<div ng-controller="navController">	
+<div ng-controller="navController">
 	<ul>
 		<li class="standard-margin-bottom"><a ui-sref="about">About</a></li>
 	</ul>
-	<ul ng-repeat="(key, value) in navigationTree">
+	<ul ng-repeat="(category, value) in navigationTree">
 		<li class="category standard-margin-bottom">
-			{{key}}
+			{{category}}
 			<ul ng-repeat="(key, value) in value">
 				<li>
-					<a ng-click="closeMenu()" ui-sref="{{key | removeFileName}}">{{key | fileNametoTitle}}</a>
+					<a ng-click="closeMenu()" ui-sref="docs({doc: '{{value | removeFileName}}'})">{{key | fileNametoTitle}}</a>
 				</li>
 			</ul>
 		</li>

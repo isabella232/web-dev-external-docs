@@ -5,11 +5,11 @@ const lrdcom = angular.module(
         'search',
 
         // plugins
-        'ngAnimate', // animation
-        'ui.router', // url router
-        'anim-in-out', // url router animation
-        'cfp.hotkeys', // application keyboard shortucts         
-        '720kb.tooltips' // tooltips
+        'ngAnimate',        // animation
+        'ui.router',        // url router
+        'anim-in-out',      // url router animation
+        'cfp.hotkeys',      // application keyboard shortucts
+        '720kb.tooltips'    // tooltips
     ]
 );
 

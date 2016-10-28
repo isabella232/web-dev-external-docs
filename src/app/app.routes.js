@@ -27,5 +27,13 @@ lrdcom.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 			data : {
 	           cssClassnames : 'about'
 	       }
-		});
+		})
+
+		.state('docs', {
+			url: '/docs/:doc',
+			templateUrl: function($stateParams) {
+				console.log($stateParams);
+				return 'src/pages/' + $stateParams.doc + '.html';
+			}
+		})
 });
