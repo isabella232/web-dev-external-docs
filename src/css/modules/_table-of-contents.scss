@@ -23,6 +23,7 @@
 				opacity: 0.5;
 
 				&:hover {
+					color: $primaryColor;
 					cursor: pointer;
 					opacity: 1;
 				}
@@ -33,5 +34,10 @@
 				}
 			}
 		}
+	}
+
+	.reading-time {
+		font-size: 0.6em;
+		font-style: italic;
 	}
 }
