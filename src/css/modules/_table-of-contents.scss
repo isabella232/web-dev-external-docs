@@ -1,0 +1,26 @@
+.table-of-contents {
+	top: 12em;
+	position: fixed;
+	right: 100px;
+
+	ul {
+		padding: 0;
+
+		li {
+			list-style: none;
+			padding: 0;
+
+			a {
+				border-width: 0;
+				color: #333;
+				opacity: 0.5;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+}

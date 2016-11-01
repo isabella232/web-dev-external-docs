@@ -39,10 +39,12 @@
 
         <!-- Main -->
         <div id="main">
-            <div class="inner">
-                <div class="anim-fade anim-in-out" data-anim-speed="500" ui-view>
-                    <!-- dynamically loaded content -->
-                </div>
+            <div class="inner" ng-controller="pageViewerController">
+                <!-- dynamically loaded content -->
+                <div class="anim-fade anim-in-out page-container" data-anim-speed="500"  ui-view></div>
+
+                <!-- article table of contents -->
+                <div class="table-of-contents" ng-include="'src/app/modules/page-viewer/table-of-contents.view.html'"></div>
             </div>
         </div>
 

@@ -62,6 +62,10 @@ gulp.task('scripts', function() {
                 'src/app/modules/search/search.module.js',
                 'src/app/modules/search/search.controller.js',
 
+                // page viewer
+                'src/app/modules/page-viewer/page-viewer.module.js',
+                'src/app/modules/page-viewer/page-viewer.controller.js',
+
                 // background
                 'src/app/modules/background/background.js',
         ]
