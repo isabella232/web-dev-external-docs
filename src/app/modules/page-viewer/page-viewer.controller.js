@@ -7,6 +7,8 @@ pageViewer.controller(
 			'$viewContentLoaded',
 			function() {
 				if ($stateParams.doc) {
+					$('.table-of-contents').show();
+
 					let url = $state.current.templateUrl($stateParams);
 
 					$http(
@@ -19,6 +21,8 @@ pageViewer.controller(
 							$scope.populateTableOfContents(response);
 						}
 					);
+				} else {
+					$('.table-of-contents').hide();
 				}
 			}
 		);
