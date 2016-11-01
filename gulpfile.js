@@ -40,6 +40,7 @@ gulp.task('scripts', function() {
             'node_modules/angular-animate/angular-animate.min.js',
             'node_modules/angular-hotkeys/build/hotkeys.min.js',
             'node_modules/angular-tooltips/dist/angular-tooltips.min.js',
+            'node_modules/angular-scroll/angular-scroll.min.js',
 
             // our application
             'src/app/app.module.js',

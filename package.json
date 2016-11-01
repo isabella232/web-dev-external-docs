@@ -20,6 +20,7 @@
     "lunr": "^0.7.1"
   },
   "devDependencies": {
+    "angular-scroll": "^1.0.0",
     "angular-ui-router-anim-in-out": "^1.0.2",
     "concurrently": "^3.1.0",
     "gulp": "gulpjs/gulp#4.0",

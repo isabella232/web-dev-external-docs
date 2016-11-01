@@ -1,6 +1,6 @@
 pageViewer.controller(
 	'pageViewerController',
-	function($scope, $location, $anchorScroll, $stateParams, $http, $state) {
+	function($scope, $location, $stateParams, $http, $state) {
 		$scope.tableOfContents = [];
 
 		$scope.$on(
@@ -26,11 +26,6 @@ pageViewer.controller(
 				}
 			}
 		);
-
-		$scope.scrollTo = function(id) {
-			$location.hash(id);
-			$anchorScroll();
-		};
 
 		$scope.populateTableOfContents = function(page) {
 			var parser = new DOMParser();

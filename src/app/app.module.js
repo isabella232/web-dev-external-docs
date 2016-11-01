@@ -10,7 +10,8 @@ const lrdcom = angular.module(
         'ui.router',        // url router
         'anim-in-out',      // url router animation
         'cfp.hotkeys',      // application keyboard shortucts
-        '720kb.tooltips'    // tooltips
+        '720kb.tooltips',   // tooltips
+        'duScroll'          // angular-scroll
     ]
 );
 
