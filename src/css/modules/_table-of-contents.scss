@@ -1,7 +1,14 @@
 .table-of-contents {
+	opacity: 0.6;
 	top: 12em;
 	position: fixed;
+	transition: $transitionNormal;
 	right: 100px;
+
+	&:hover {
+		opacity: 1;
+		transition: $transitionNormal;
+	}
 
 	ul {
 		padding: 0;
@@ -19,8 +26,12 @@
 					cursor: pointer;
 					opacity: 1;
 				}
+
+				&.active {
+					color: $primaryColor;
+					opacity: 1
+				}
 			}
 		}
 	}
-
 }

@@ -1,11 +1,12 @@
 pageViewer.controller(
 	'pageViewerController',
-	function($scope, $location, $stateParams, $http, $state) {
+	function($scope, $location, $stateParams, $http, $state, $document, $rootScope) {
 		$scope.tableOfContents = [];
 
 		$scope.$on(
 			'$viewContentLoaded',
 			function() {
+				// only run this if this is a documentation page
 				if ($stateParams.doc) {
 					$('.table-of-contents').show();
 
@@ -18,6 +19,7 @@ pageViewer.controller(
 						}
 					).success(
 						function(response) {
+							$scope.wrapH2sInSections();
 							$scope.populateTableOfContents(response);
 						}
 					);
@@ -26,6 +28,14 @@ pageViewer.controller(
 				}
 			}
 		);
+
+		$scope.wrapH2sInSections= function(page) {
+			$('.page-container h2').each(function(index, h2) {
+				var h2ID = $(this).attr('id');
+				$(this).attr('id', '');
+			    $(h2).nextUntil('h2').addBack().wrapAll(`<div class="content" id="${h2ID}"></div>`);
+			});
+		};
 
 		$scope.populateTableOfContents = function(page) {
 			var parser = new DOMParser();

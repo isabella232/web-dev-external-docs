@@ -1,6 +1,8 @@
 # Tickets
 ## Sometimes, you need help. 
 
+making a change
+
 *Here's how to effectively request Website and collateral design services using Liferay's JIRA system.*
 
 ## STEP 1: Initiation
