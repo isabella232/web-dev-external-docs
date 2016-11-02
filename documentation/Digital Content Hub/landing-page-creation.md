@@ -1,8 +1,9 @@
 # Landing Page Creation
 
+## Intro
 Landing pages are actually web content articles with a series of embedded web content articles. This allows us to easily create and launched a new landing page without much work. However there are a few manual steps necessary.
 
-## Steps to create a new landing page:
+## Creating a New Landing Page
 1. Navigate to the landing page admin page [www.liferay.com/resources/admin]("http://www.liferay.com/resources/admin")
 2. Select the desired landing page template and click "Create"
 3. You will be redirected to a new landing page
