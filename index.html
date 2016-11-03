@@ -15,31 +15,18 @@
     <![endif]-->
 </head>
 
-<body ng-app="lrdcom" route-css-classnames>
-    <div class="page-bg">
-        <div class="overlay"></div>
-        <div class="flexslider">
-            <ul class="slides">
-                <li>
-                    <img src="src/images/home_bg-1.jpg" />
-                </li>
-                <li>
-                    <img src="src/images/home_bg-2.jpg" />
-                </li>
-                <li>
-                    <img src="src/images/home_bg-3.jpg" />
-                </li>
-            </ul>
-        </div>
-    </div>
+<body initialisation ng-app="lrdcom" route-css-classnames>
+    <!-- Background -->
+    <div class="page-bg" ng-controller="backgroundController" ng-include="'src/app/modules/background/background.view.html'"></div>
+
     <div id="wrapper" ng-controller="mainController">
-        <!-- Header -->
+        <!-- Header & Menu -->
         <div ng-include="'src/templates/header.html'"></div>
 
         <!-- Search Bar -->
         <div ng-include="'src/app/modules/search/search.view.html'"></div>
 
-        <!-- Main -->
+        <!-- Main Content Display-->
         <div id="main">
             <div class="inner" ng-controller="pageViewerController">
                 <!-- article table of contents -->

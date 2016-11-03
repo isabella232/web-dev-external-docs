@@ -69,7 +69,8 @@ gulp.task('scripts', function() {
                 'src/app/modules/page-viewer/page-viewer.controller.js',
 
                 // background
-                'src/app/modules/background/background.js',
+                'src/app/modules/background/background.module.js',
+                'src/app/modules/background/background.controller.js',
         ]
     )
     .pipe(concat('app.min.js'))
