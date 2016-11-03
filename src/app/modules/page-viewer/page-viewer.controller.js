@@ -59,7 +59,7 @@ pageViewer.controller(
 		};
 
 		$scope.wrapVideoElements = function() {
-			$('iframe').wrap(`<div class="video-container" />`)
+			$('.page-container iframe').wrap(`<div class="video-container" />`)
 		};
 	}
 );
