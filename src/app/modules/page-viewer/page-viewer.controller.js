@@ -23,6 +23,7 @@ pageViewer.controller(
 							$scope.showReadingTime();
 							$scope.populateTableOfContents(response);
 							$scope.wrapVideoElements();
+							$scope.activateScreenshots();
 						}
 					);
 				} else {
@@ -55,6 +56,33 @@ pageViewer.controller(
 					id: h2.id,
 					text: h2.innerHTML
 				};
+			});
+		};
+
+		$scope.activateScreenshots = function() {
+			var $screenshotBlocks = $('.screenshot-block');
+
+			// insert img in the screenshot viewer
+			$screenshotBlocks
+				.append(`
+					<div class="screenshot-viewer"></div>
+				`)
+				.each(function(index) {
+					var img = $(this).find('img').clone();
+					img.appendTo($(this).find('.screenshot-viewer'));
+				});
+
+			$screenshotBlocks.find('img').on(
+				'click',
+				function(e) {
+					$screenshotBlocks.removeClass('active');
+					$(this).parent().toggleClass('active')
+				}
+			);
+
+			$('.screenshot-viewer').on('click', 'img', function(e) {
+				e.stopPropogation();
+				$(this).parent().parent().toggleClass('active');
 			});
 		};
 

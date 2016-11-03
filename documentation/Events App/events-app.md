@@ -13,14 +13,13 @@ The following menu items are shown:
 - Maps or Activities, if Event Connect disabled
 - Gallery
 
-Here is how the menu looks with EventConnect enabled:
-
-<div class="standard-padding-vertical text-center">
+<div class="screenshot-block">
+    Here is how the menu looks with EventConnect enabled:
     <img src="eventsapp_menu_eventconnect.png">
 </div>
 
-Here is how the menu looks with EventConnect disabled:
-
-<div class="standard-padding-vertical text-center">
+<div class="screenshot-block">
+    Here is how the menu looks with EventConnect disabled:
     <img src="eventsapp_menu_noeventconnect.png">
 </div>
+
