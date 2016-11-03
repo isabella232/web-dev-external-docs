@@ -1,6 +1,6 @@
 pageViewer.controller(
 	'pageViewerController',
-	function($scope, $location, $stateParams, $http, $state, pageViewerUtils) {
+	function($scope, $location, $stateParams, $state, $http, $state, pageViewerUtils) {
 		$scope.tableOfContents = [];
 
 		$scope.$on(
@@ -22,7 +22,7 @@ pageViewer.controller(
 							$scope.wrapH2sInSections();
 							$scope.showReadingTime();
 							$scope.populateTableOfContents(response);
-							$scope.wrapVideoElements();
+							$scope.activateVideo();
 							$scope.activateScreenshots();
 						}
 					);
@@ -86,8 +86,20 @@ pageViewer.controller(
 			});
 		};
 
-		$scope.wrapVideoElements = function() {
-			$('.page-container iframe').wrap(`<div class="video-container" />`)
+		$scope.activateVideo = function() {
+			$('.page-container iframe').wrap(`<div class="video-container" du-scrollspy />`);
+
+			var distance = $('.video-container').offset().top,
+			    $window = $(window);
+
+			$window.scroll(function() {
+			    if ( $window.scrollTop() >= distance ) {
+			        $('.video-container').addClass('fixed');
+			    } else {
+			    	$('.video-container').removeClass('fixed');
+			    }
+			});
+
 		};
 	}
 );
