@@ -22,6 +22,7 @@ pageViewer.controller(
 							$scope.wrapH2sInSections();
 							$scope.showReadingTime();
 							$scope.populateTableOfContents(response);
+							$scope.wrapVideoElements();
 						}
 					);
 				} else {
@@ -55,6 +56,10 @@ pageViewer.controller(
 					text: h2.innerHTML
 				};
 			});
+		};
+
+		$scope.wrapVideoElements = function() {
+			$('iframe').wrap(`<div class="video-container" />`)
 		};
 	}
 );
