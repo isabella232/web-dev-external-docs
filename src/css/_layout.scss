@@ -72,12 +72,12 @@ header p {
 		}
 
 		.symbol {
-			margin-right: 0.65em;
+			margin-right: 0.5em;
 
-			img {
+			img,
+			svg {
 				display: block;
 				height: 1.5em;
-				width: 1.5em;
 			}
 		}
 	}
