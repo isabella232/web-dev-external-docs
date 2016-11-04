@@ -8,7 +8,7 @@ textarea {
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	font-size: 20pt;
 	font-weight: 300;
-	line-height: 1.75;
+	line-height: 1.6;
 }
 
 @media screen and (max-width: 1680px) {
@@ -16,7 +16,7 @@ textarea {
 	input,
 	select,
 	textarea {
-		font-size: 14pt;
+		font-size: 16pt;
 	}
 }
 
@@ -25,7 +25,7 @@ textarea {
 	input,
 	select,
 	textarea {
-		font-size: 12pt;
+		font-size: 14pt;
 	}
 }
 
@@ -44,7 +44,7 @@ a {
 
 	&:hover {
 		border-bottom-color: transparent;
-		color: #F2849E;
+		color: $complementaryColor;
 	}
 }
 
@@ -161,8 +161,8 @@ blockquote {
 code {
 	background: rgba(144, 144, 144, 0.075);
 	border: solid 1px #C9C9C9;
-	border-radius: 4px;
-	font-family: "Courier New", monospace;
+	border-radius: .2em;
+	font-family: "Source Code Pro", "Courier New", monospace;
 	font-size: 0.9em;
 	margin: 0 0.25em;
 	padding: 0.25em 0.65em;
@@ -170,7 +170,7 @@ code {
 
 pre {
 	-webkit-overflow-scrolling: touch;
-	font-family: "Courier New", monospace;
+	font-family: "Source Code Pro", "Courier New", monospace;
 	font-size: 0.9em;
 	margin: 0 0 2em 0;
 
