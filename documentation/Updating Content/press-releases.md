@@ -2,23 +2,56 @@
 
 > Create a press release for Liferay.com quickly with Web Team's press release structures.
 
-Make sure you are logged in and head to the control panel.
+Make sure you are <a href="https://www.liferay.com/c/portal/login?p_l_id=10814" target="_blank">logged in</a> and head to the control panel.
 
 ## Creating a New Press Release
-1. In Control Panel, go to Web Content: Home > COMPANY > PRESS RELEASES
-2. Create a new "Press Release" web content by clicking Add > Press Release
-3. Fill out information for the press release:
-    - Title (Required) - The title that will display on the press releases page
-    - Heading - field that will be displayed on the press release page. For example, https://www.liferay.com/press-release/ariadne-becomes-liferay-platinum-partner-in-italy
-    - Subheading - optional field 
-    - Content - press release body 
-    - Additional About Content - optional field (i.e., About Ariadne)
-    - Contact Info - optional field 
-4. Categorize the press release. Go to the Categorization section and complete the following
-    - Type = Press Release
-    - Locations
-    - News Types
-    - Year
-5. Optionally, schedule the press release for a future date from the Schedule section. Note: display date and time is PST. 
-6. Click Publish
+
+<div class="screenshot-block">
+    <img src="press-release-1.png" />
+    1. In Control Panel, go to Web Content: Home > COMPANY > PRESS RELEASES
+   
+</div>
+
+<div class="screenshot-block">
+    <img src="press-release-2.png" />
+    2. Create a new "Press Release" web content by clicking Add > Press Release
+</div>
+
+<div class="screenshot-block">
+    <img src="press-release-3.png" />
+    3. Fill out information for the press release:
+
+    <ul> 
+        <li>**Title** - The title that will display on the press releases page</li>
+        <li>**Heading** - field that will be displayed on the press release page. E.g. https://www.liferay.com/press-release/ariadne-becomes-liferay-platinum-partner-in-italy</li>
+        <li>**Subheading** *(optional)* </li>
+        <li>**Content** - press release body</li>
+        <li>**Additional About Content** *(optional)*</li>
+        <li>**Contact Info** *(optional)*</li>
+    </ul>
+    
+</div>
+
+<div class="screenshot-block">
+    <img src="press-release-4.png" />
+    4. Categorize the press release. Go to the Categorization section and complete the following:
+    5. 
+    <ul>
+        <li>**Type** - Press Release</li>
+        <li>**Locations**</li>
+        <li>**News Types**</li>
+        <li>**Year**</li>
+    </ul>
+</div>
+
+<div class="screenshot-block">
+    <img src="press-release-5.png" />
+    5. Optionally, schedule the press release for a future date from the Schedule section. Note: display date and time is PST. 
+    
+</div>
+
+<div class="screenshot-block">
+    <img src="press-release-publish.png" />
+    6. Click **Publish**
+</div>
 

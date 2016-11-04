@@ -50,12 +50,13 @@ a {
 
 strong,
 b {
-	font-weight: 900;
+	font-weight: 500;
 }
 
 em,
 i {
 	font-style: italic;
+	font-weight: inherit;
 }
 
 p {
@@ -224,7 +225,7 @@ ol {
 
 ul {
 	list-style: disc;
-	margin: 0 0 2em 0;
+	margin: 1em 0 1em 1em;
 	padding-left: 1em;
 
 	li {

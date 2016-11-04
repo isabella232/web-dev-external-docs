@@ -1,5 +1,5 @@
 .content {
-	padding-bottom: 4em;
+	padding-bottom: 3em;
 }
 
 blockquote {
@@ -55,7 +55,7 @@ iframe {
 }
 
 .screenshot-block {
-	padding: $smallSpacing;
+	padding: 0 150px 2em 0;
 	position: relative;
 
 	&:after {
@@ -69,25 +69,29 @@ iframe {
 
 	.screenshot-viewer {
 		bottom: 0;
-		display: none;
+		height: 0;
 		position: absolute;
 		right: 0;
 		transition: $transitionFast;
+		max-width: 0;
 
 		img {
 			border-width: 0;
 			box-shadow: 0 0 30px #CECECE;
-			max-width: 300px;
+			max-width: 100%;
 			max-height: 100%;
 		}
 	}
 
 	img {
 		border: 1px solid #CECECE;
-		float: right;
+		margin: 0 0 0 2em;
 		max-height: 50px;
 		max-width: 100px;
 		opacity: 0.5;
+		position: absolute;
+		right: 0;
+		top: 0;
 		transition: $transitionNormal;
 
 		&:hover {
@@ -99,8 +103,9 @@ iframe {
 
 	&.active {
 		.screenshot-viewer {
-			display: block;
+			height: auto;
 			transition: $transitionFast;
+			max-width: 100%;
 
 			img {
 				opacity: 1;
@@ -126,6 +131,7 @@ iframe {
 
 	ul {
 		padding: 0;
+		margin: 0 0 1em;
 
 		li {
 			list-style: none;
