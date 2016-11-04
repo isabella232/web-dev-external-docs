@@ -48,6 +48,11 @@ body.page-home {
 			max-width: 10000% !important;
 			min-height: 100%;
 			min-width: 100%;
+
+			@include respond-to(tablet) {
+				height: 100%;
+    			width: auto;
+			}
 		}
 	}
 

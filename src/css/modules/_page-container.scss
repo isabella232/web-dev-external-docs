@@ -138,10 +138,6 @@
 	}
 
 	@include respond-to(tablet) {
-		opacity: 1;
-		position: relative;
-		top: initial;
-		width: 100%;
-		left: initial;
+		display: none !important;
 	}
 }
