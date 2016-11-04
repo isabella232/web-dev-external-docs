@@ -122,15 +122,15 @@ input {
 	&[type="password"]:focus,
 	&[type="email"]:focus,
 	&[type="tel"]:focus {
-		border-bottom-color: rgba(255, 255, 255, 0.5);
-		box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.5);
+		border-bottom-color: $elementColor;
+		box-shadow: inset 0 -1px 0 0 $elementColor;
 	}
 }
 
 select:focus,
 textarea:focus {
-	border-bottom-color: rgba(255, 255, 255, 0.5);
-	box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.5);
+	border-bottom-color: $elementColor;
+	box-shadow: inset 0 -1px 0 0 $elementColor;
 }
 
 .select-wrapper {
@@ -243,8 +243,8 @@ input {
 
 	&[type="checkbox"]:focus + label:before,
 	&[type="radio"]:focus + label:before {
-		border-color: #F2849E;
-		box-shadow: 0 0 0 1px #F2849E;
+		border-color: $elementColor;
+		box-shadow: 0 0 0 1px $elementColor;
 	}
 
 	&[type="checkbox"] + label:before {

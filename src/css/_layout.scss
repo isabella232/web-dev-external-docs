@@ -133,9 +133,9 @@ header p {
 /* Footer */
 
 #footer {
-	background-color: #F6F6F6;
+	background-color: $elementColor;
 	bottom: 0;
-	font-size: 12px;
+	font-size: .75em;
 	position: absolute;
 	width: 100%;
 
