@@ -9,6 +9,7 @@
 
 	.search-input-container {
 		position: relative;
+		text-align: left;
 		width: 70%;
 
 		input {
@@ -22,6 +23,11 @@
 			right: 10px;
 			top: 50%;
 			transform: translateY(-50%);
+		}
+
+		.tip {
+			font-size: 0.8em;
+			font-style: italic;
 		}
 	}
 
