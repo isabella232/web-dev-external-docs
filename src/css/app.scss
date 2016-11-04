@@ -28,8 +28,6 @@ html {
 }
 
 body {
-	// display: none;
-
 	.page-bg {
 		height: 100%;
 		opacity: 0;
@@ -56,26 +54,5 @@ header {
 		&:hover {
 			opacity: 0.5;
 		}
-	}
-}
-
-#main {
-	blockquote {
-		color: #CECECE;
-		font-style: italic;
-		font-weight: 200;
-		letter-spacing: 0;
-		line-height: 1em;
-		margin-top: -2em;
-		padding-left: 1em;
-		text-transform: none;
-
-		p {
-			margin: 0;
-		}
-	}
-
-	iframe {
-		width: 100%;
 	}
 }
