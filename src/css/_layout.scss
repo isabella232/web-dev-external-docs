@@ -254,9 +254,12 @@ header p {
 /* Wrapper */
 
 .inner {
-	max-width: 48em;
-	padding: 0 4em;
-	width: 100%;
+    padding: 0 2em;
+    width: 65%;
+
+    @include respond-to(tablet) {
+    	width: 100%;
+    }
 }
 
 @media screen and (max-width: 736px) {

@@ -94,7 +94,7 @@
 	top: 12em;
 	position: fixed;
 	transition: $transitionNormal;
-	right: 100px;
+	left: 75%;
 	width: 250px;
 
 	&:hover {
@@ -140,8 +140,8 @@
 	@include respond-to(tablet) {
 		opacity: 1;
 		position: relative;
-		right: initial;
 		top: initial;
 		width: 100%;
+		left: initial;
 	}
 }
