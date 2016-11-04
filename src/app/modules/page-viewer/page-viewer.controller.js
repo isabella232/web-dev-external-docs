@@ -76,30 +76,32 @@ pageViewer.controller(
 				'click',
 				function(e) {
 					$screenshotBlocks.removeClass('active');
-					$(this).parent().toggleClass('active')
+					$(this).parent().toggleClass('active');
 				}
 			);
 
-			$('.screenshot-viewer').on('click', 'img', function(e) {
-				e.stopPropogation();
+			$('.screenshot-viewer').on('img', function(e) {
+				e.stopPropagation();
 				$(this).parent().parent().toggleClass('active');
 			});
 		};
 
 		$scope.activateVideo = function() {
-			$('.page-container iframe').wrap(`<div class="video-container" du-scrollspy />`);
+			if ($('.page-container iframe').length) {
+				console.log('there is an iframe in here')
+				$('.page-container iframe').wrap(`<div class="video-container" du-scrollspy />`);
 
-			var distance = $('.video-container').offset().top,
-			    $window = $(window);
+				var distance = $('.video-container').offset().top,
+				    $window = $(window);
 
-			$window.scroll(function() {
-			    if ( $window.scrollTop() >= distance ) {
-			        $('.video-container').addClass('fixed');
-			    } else {
-			    	$('.video-container').removeClass('fixed');
-			    }
-			});
-
+				$window.scroll(function() {
+				    if ( $window.scrollTop() >= distance ) {
+				        $('.video-container').addClass('fixed');
+				    } else {
+				    	$('.video-container').removeClass('fixed');
+				    }
+				});
+			}
 		};
 	}
 );
