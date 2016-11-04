@@ -106,7 +106,7 @@ gulp.task(
 gulp.task(
     'doc-assets',
     function() {
-        return gulp.src(['documentation/**/*.png', 'documentation/**/*.jpg'])
+        return gulp.src(['documentation/**/*.png', 'documentation/**/*.jpg', 'documentation/**/*.svg'])
         .pipe(flatten())
         .pipe(gulp.dest('src/pages/assets/'))
     }
