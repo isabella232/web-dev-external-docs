@@ -1,3 +1,11 @@
+pageslide {
+	opacity: 0.9;
+
+	@include respond-to(widescreen) {
+		width: 30% !important;
+	}
+}
+
 .menu {
 	background: $primaryColor;
 	height: 100vh;

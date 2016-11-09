@@ -30,7 +30,7 @@ $widescreen: 1200px;
 
 @mixin respond-to($point) {
 	@if $point == widescreen {
-		@media (max-width: $widescreen) { @content ; }
+		@media (min-width: $widescreen) { @content ; }
 	}
 	@else if $point == desktop {
 		@media (max-width: $desktop) { @content ; }
