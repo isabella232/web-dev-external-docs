@@ -82,6 +82,21 @@ iframe {
 			max-width: 100%;
 			max-height: 100%;
 		}
+
+		@include respond-to(phablet) {
+			left: 50%;
+			right: initial;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			position: fixed;
+			width: 90%;
+			z-index: 10;
+
+			img {
+				box-shadow: 0 0 20px #000;
+				margin: 0;
+			}
+		}
 	}
 
 	img {

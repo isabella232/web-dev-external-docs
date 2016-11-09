@@ -45,7 +45,7 @@
 </div>
 
 ## Company Logo for Case Study
-If you need a logo for case study, create a ticket for Design to provide one. Here's some information to provide Design team:
+If you need a logo for case study, create a ticket for Design to provide one. Here's some information to provide Design team
 
 - Please get an SVG versus PNG if the overall size of the image will be less. 
 - Request logo be: size of 226x64 - or view box size of 0 0 226 64
