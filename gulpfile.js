@@ -84,6 +84,7 @@ gulp.task('buildNavigationIndex', function() {
                 'documentation/**/*.md',
                 '!src/pages/home.html',
                 '!src/pages/404.html',
+                '!documentation/_drafts/**/*'
             ]
         )
         .pipe(directoryMap({filename: 'docsTree.json'}))
@@ -94,7 +95,11 @@ gulp.task('buildNavigationIndex', function() {
 gulp.task(
     'markdown',
     function() {
-        return gulp.src('documentation/**/*.md')
+        return gulp.src(
+            [
+                'documentation/**/*.md',
+                '!/documentation/_drafts/**/*'
+            ])
             .pipe(replace('img src="', 'img src="src/pages/assets/'))
             .pipe(markdown())
             .pipe(prettify({indent_char: ' ', indent_size: 4}))
@@ -106,7 +111,13 @@ gulp.task(
 gulp.task(
     'doc-assets',
     function() {
-        return gulp.src(['documentation/**/*.png', 'documentation/**/*.jpg', 'documentation/**/*.svg'])
+        return gulp.src(
+            [
+                'documentation/**/*.png',
+                'documentation/**/*.jpg',
+                'documentation/**/*.svg',
+                '!documentation/_drafts/**/*',
+            ])
         .pipe(flatten())
         .pipe(gulp.dest('src/pages/assets/'))
     }
