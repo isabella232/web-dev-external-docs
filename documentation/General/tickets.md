@@ -1,9 +1,7 @@
 # Tickets
+> Getting web team to do quality work for you!
 
-## Basically How It Works
-
-To get web team to do work, please adhere to the following guide:
-
+## Basic Guidelines of Our Process
 <img src="web-team-tickets.svg" />
 
 ## Other Tips

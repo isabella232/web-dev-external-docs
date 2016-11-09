@@ -81,7 +81,17 @@ iframe {
 			box-shadow: 0 0 30px #CECECE;
 			max-width: 100%;
 			max-height: 100%;
+			transition: $transitionFast
+
+
 		}
+
+		&:hover {
+				img {
+					box-shadow: 0 0 40px #999;
+					transition: $transitionFast;
+				}
+			}
 
 		@include respond-to(phablet) {
 			left: 50%;
