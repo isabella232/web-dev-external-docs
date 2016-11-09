@@ -13,10 +13,26 @@ There are two ways to localize content on Liferay.com: 1) Live edit 2) Through W
 How to Live Edit:
 
 1. Login
-2. Select your localization
-3. Make sure the Edit Controls button is Green and active.
-4. Click on the text and highlight. Replace text with your translated copy.
-5. Click the save button
+
+<div class="screenshot-block">
+    <img src="localization-1.png" />
+    2. Select your localization
+</div>
+
+<div class="screenshot-block">
+    <img src="localization-2.png" />
+    3. Make sure the Edit Controls button is Green and active.
+</div>
+
+<div class="screenshot-block">
+    <img src="localization-3.png" />
+    4. Click on the text and highlight. Replace text with your translated copy.
+</div>
+
+<div class="screenshot-block">
+    <img src="localization-4.png" />
+    5. Click the save button
+</div>
 
 ## Translating Through Web Content Editor
 Sometimes, there are sections that aren't Live-editable. You'll have to go through the web content editor.
@@ -24,8 +40,28 @@ Sometimes, there are sections that aren't Live-editable. You'll have to go throu
 How to translate through web content editor:
 
 1. Login
-2. Find the content you're looking for and hit "edit"
-3. Click Add Translation (or if there is your translation already there, select it)
-4. Find the text you need to translate and replace with your translated copy
-5. Click Publish
 
+<div class="screenshot-block">
+    <img src="localization-web-content-1.png" />
+    2. Find the content you're looking for and hit "edit"
+</div>
+
+<div class="screenshot-block">
+    <img src="localization-web-content-2.png" />
+    3. Click Add Translation (or if there is your translation already there, select it)
+</div>
+
+<div class="screenshot-block">
+    <img src="localization-web-content-3.png" />
+    4. It will open a new modal with the current web content's translation. Find the text you need to translate and replace with your translated copy.
+</div>
+
+<div class="screenshot-block">
+    <img src="localization-web-content-save.png" />
+    5. When done replacing proper translation, click Save. The modal will close.
+</div>
+
+<div class="screenshot-block">
+    <img src="localization-publish.png" />
+    5. Click Publish.
+</div>

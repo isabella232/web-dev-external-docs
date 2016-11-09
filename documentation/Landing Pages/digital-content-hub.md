@@ -1,4 +1,4 @@
-# Landing Page Creation
+# Digital Content Hub
 
 ## Intro
 Landing pages are actually web content articles with a series of embedded web content articles. This allows us to easily create and launched a new landing page without much work. However there are a few manual steps necessary.

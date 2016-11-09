@@ -1,77 +1,76 @@
 # Case Studies
-> Adding new case studies to Liferay.com 
+> Case studies are an important marketing piece to Liferay's web presence. Here's how to add them quickly.
 
-## Intro
-Please note, before adding a Case Study to the site, consider whether to have DESIGN create an svg (scalable vector graphic) logo for the Case Study. Case Studies that are Highlighted include the company’s logo. If the Case Study is going to be a Highlighted study, please create that ticket first and then link it to the LRIS ticket.
+## Adding a Case Study
+1. Login and Go In Control Panel
+2. Go to Web Content and Navigate to > Web Content > RESOURCES > CASE STUDIES
 
-Important information about the logo request made to design: 
+<div class="screenshot-block">
+    <img src="case-studies-1.png" />
+    3. Clicking Add > Case Study
+</div>
 
-Please try to provide Design with an svg. This may require hunting online through google image search. Request logo be: size of 226x64 - or view box size of 0 0 226 64
+<div class="screenshot-block">
+    <img src="case-studies-guide.jpg" />
+    4. Fill out case study page according to this guide:
+</div>
 
-If you have retrieved the svg logo from Design, carry on with the following instructions.
+<div class="screenshot-block">
+    <img src="case-studies-2.png" />
+    5. We need to provide the company summary shown in Resources home page...
+</div>
 
-## Uploading Case Studies
-In Control Panel, go to > Web Content > RESOURCES > CASE STUDIES
-Create new case study article by clicking Add > Case Study
-*If your Case Study is in a language other than English, select “Change” beside the default language. Choose a new default language. 
-If the language is not one of the options, just leave it in English.
+<div class="screenshot-block">
+    <img src="case-studies-abstract.png" />
+    6. ...by going to Abstract and filling out Summary information
+</div>
 
-## Title article as Company Name.
-Note that the title will be used to create the url (ie “Autozone” url will be “/resources/case-studies/autozone”)
-Fill in all applicable fields (if applicable, copy content from current case studies https://www.liferay.com/products/liferay-portal/stories)
-Use the repeatable fields of Subheading and Summary Paragraph to add all content from case study to page
+<div class="screenshot-block">
+    <img src="case-studies-categorization.png" />
+    7. Categorize the Case Study
+    
+    <ul>
+        <li>Category List Filter: Resources</li>
+        <li>Industries</li>
+        <li>Locations</li>
+        <li>Resource Types: Case Studies</li>
+        <li>Solutions</li>
+    </ul>
+       
+</div>
 
-Note, html code must be used for any bullet points. They may be made in the following markup: 
-```
-<ul>
-<li>Listed item</li>
-<li>Listed item 2</li>
-<li>Listed item 3</li>
-</ul>
-```
+<div class="screenshot-block">
+    <img src="case-studies-publish.png" />
+    8. Hit Publish
+</div>
+
+## Company Logo for Case Study
+If you need a logo for case study, create a ticket for Design to provide one. Here's some information to provide Design team:
+
+- Please get an SVG versus PNG if the overall size of the image will be less. 
+- Request logo be: size of 226x64 - or view box size of 0 0 226 64
 
 
-Upload PDF of case study by:
+## Uploading Case Studies PDFs
+In order to add an asset e.g. to the Case Study, you need to first upload it in the Document library to make it available for us.
 
-1. Going to the Asset Field and clicking Select
-2. Click on RESOURCES > CASE STUDIES If a folder for your current case study does not exist (ie. AUTOZONE), create it.
-3. Click Add > Subfolder
-4. Name the subfolder Company Name in ALL CAPS (ie. AUTOZONE) and Save
-5. Click on folder for your current case study (ie. AUTOZONE)
-6. Click Add > Case Study
-7. Title resource as Company Name.
-8. Fill in all applicable fields. Do not add any categories (this will be done back on the article level...see step “5. g.”)
-9. Click Publish
+1. Login
+2. In Control Panel, in **Documents and Media** and Navigate to Resources > Case Studies
 
-Upload any assets available for the case study (ie. company logo, screenshots):
+<div class="screenshot-block">
+    <img src="case-studies-3.png" />
+    3. If the company for your case study already exists, navigate to there. Otherwise, create a new folder in all caps by selected Add > Subfolder
+</div>
 
-1. Click on the Select button on the field you want to add the asset to
-2. Click on RESOURCES > CASE STUDIES 
-3. If a folder for your current case study does not exist (ie. AUTOZONE), create it.
-4. Click Add > Subfolder
-5. Name the subfolder Company Name in ALL CAPS (ie. AUTOZONE) and Save
-6. Click on folder for your current case study (ie. AUTOZONE)
-7. Click Add > Basic Document
-8. Title resource to include Company Name (ie. Autozone Logo).
-9. Do not add any categories
-10. Click Publish
+<div class="screenshot-block">
+    <img src="case-studies-upload.png" />
+    4. Upload your PDF by either 1) dragging and dropping files in or 2) Add > Basic Document
+</div>
+
+The asset should now be available for use when you are adding a Case Study
 
 ## Case Studies with Videos
-If the case study has a video, add the YouTube link to the field “Case Study Video URL ID”, rather than uploading the file directly
-Back on the article edit screen, in the Content section (in the right navigation) if there are multiple assets associated with the Case Study, provide the Button Text for each Asset: `Case Study EN, Case Study FR, etc.`
-
-## Presentation
-Back on the article edit screen, click Categorization (in the right navigation) and categorize as follows:
-- Category List Filter = Resources
-- Industries
-- Locations
-- Resource Types = Case Studies
-- Solutions
-
-Add Preview copy to the Abstract section (found in the navigation on the right, above the Publish/Drafts/Cancel Buttons).
-Abstract must be 140 characters or less.
-Click Publish
-
-On the associated JIRA ticket, set the Workflow status to “Waiting for Approval” and assign it to “LR Information Services”. Someone on the Webteam will double-check your work!
-
-**PLEASE NOTE**: *If a case study that you have added is showing up twice, it may be because both the article and the case study PDF are categorized. The case study PDF should have no categories.*
+<div class="screenshot-block">
+    <img src="case-studies-video.png" />
+    If the case study has a video, add the YouTube link to the field “Case Study Video URL ID”.
+</div>
