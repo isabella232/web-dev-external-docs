@@ -1,8 +1,17 @@
 lrdcom.config(
 	function($stateProvider, $urlRouterProvider, $locationProvider, stringUtilsProvider) {
-		$urlRouterProvider.otherwise('/');
+
+		$urlRouterProvider.otherwise('404');
+		$urlRouterProvider.when('', '/');
 
 		$stateProvider
+			.state(
+				'otherwise',
+				{
+					templateUrl: 'src/pages/about.html'
+				}
+			)
+
 			.state(
 				'home',
 				{
@@ -17,7 +26,11 @@ lrdcom.config(
 			.state(
 				'404',
 				{
-					template: '<div>error</div>'
+					data: {
+						cssClassnames: 'page-not-found'
+					},
+					templateUrl: 'src/pages/404.html',
+					url: '/404'
 				}
 			)
 
