@@ -1,7 +1,7 @@
-# Tickets
+# Working with Web Team
 > Getting web team to do quality work for you!
 
-## Basic Guidelines of Our Process
+## Overview
 <img src="web-team-tickets.svg" />
 
 ## Other Tips
