@@ -9,7 +9,6 @@ Make sure you are <a href="https://www.liferay.com/c/portal/login?p_l_id=10814" 
 <div class="screenshot-block">
     <img src="press-release-1.png" />
     1. In Control Panel, go to Web Content: Home > COMPANY > PRESS RELEASES
-   
 </div>
 
 <div class="screenshot-block">
@@ -29,7 +28,6 @@ Make sure you are <a href="https://www.liferay.com/c/portal/login?p_l_id=10814" 
         <li>**Additional About Content** *(optional)*</li>
         <li>**Contact Info** *(optional)*</li>
     </ul>
-    
 </div>
 
 <div class="screenshot-block">
@@ -47,11 +45,9 @@ Make sure you are <a href="https://www.liferay.com/c/portal/login?p_l_id=10814" 
 <div class="screenshot-block">
     <img src="press-release-5.png" />
     5. Optionally, schedule the press release for a future date from the Schedule section. Note: display date and time is PST. 
-    
 </div>
 
 <div class="screenshot-block">
     <img src="press-release-publish.png" />
     6. Click **Publish**
 </div>
-

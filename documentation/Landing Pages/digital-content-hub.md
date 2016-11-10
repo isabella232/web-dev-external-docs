@@ -2,36 +2,36 @@
 > Digital Content Hub landing pages can be easily created with our one-click build.
 
 ## Intro
-Landing pages are actually web content articles with a series of embedded web content articles. This allows us to easily create and launched a new landing page without much work. However there are a few manual steps necessary.
+Landing pages are actually web content articles with a series of embedded web content articles. This allows us to create and launch a new landing page without much work. However, there are a few necessary manual steps.
 
 ## Creating a New Landing Page
-1. Navigate to the landing page admin page [http://www.liferay.com/resources/admin](http://www.liferay.com/resources/admin)
+1. Navigate to the landing page admin page [http://www.liferay.com/resources/admin](http://www.liferay.com/resources/admin).
 
 <div class="screenshot-block">
 	<img src="digital-content-hub-create.png" />
-	2. Click the template "Digital Info Hub" - This will automatically generate a new landing page 	
+	2. Click the template "Digital Info Hub". This will automatically generate a new landing page.
 </div>
 
 3.&nbsp;You will be redirected to that new landing page where you can begin configuring and editing content on it.
 
 ## Configuring Your Newly Created Landing Page
-1. Copy the current URL and save it for step 5
+1. Copy the current URL and save it for step five.
 
 <div class="screenshot-block">
 	<img src="digital-content-hub-edit.png" />
-	2. Scroll to the bottom and click "Edit Landing Page"
+	2. Scroll to the bottom and click "Edit Landing Page".
 </div>
 
-3. Update title to reflect desired friendly URL (i.e. desired friendly URL: `/your-new-landing-page`, title: Your New Landing Page)
-4. Save changes by clicking "Publish"
-5. Navigate to the URL from step 1
-6. Scroll to the bottom and click "Update URL"
-7. The URL for your landing page should now be www.liferay.com/resources/your-new-landing-page
+3. Update title to reflect desired friendly URL (e.g. Desired friendly URL: `/your-new-landing-page`, Title: Your New Landing Page).
+4. Save changes by clicking "Publish".
+5. Navigate to the URL from step one.
+6. Scroll to the bottom and click "Update URL".
+7. The URL for your landing page should now be www.liferay.com/resources/your-new-landing-page.
 
 ## Updating Articles
-1. For each embedded article click on the "Edit" link on the left below the article
-2. Prepend the existing title with the landing page title (i.e. "DCH Banner - /resources" > "Your New Landing Page DCH Banner - /resources")
-3. Save changes by clicking "Publish"
+1. For each embedded article, click on the "Edit" link on the left below the article.
+2. Prepend the existing title with the landing page title (e.g. "DCH Banner - /resources" > "Your New Landing Page DCH Banner - /resources").
+3. Save changes by clicking "Publish".
 
 ## Editing Rules for Content Authors
 Basic HTML knowledge is necessary to make formatting changes to articles.
@@ -50,7 +50,7 @@ Basic HTML knowledge is necessary to make formatting changes to articles.
 ### Element
 ##### Headers
 - text field: blank
-- tag: `h2`, `h3`, or `h4`
+- tag: `h2`, `h3` or `h4`
 - content: header text
 - class: blank
 
@@ -70,10 +70,10 @@ Basic HTML knowledge is necessary to make formatting changes to articles.
 - text field: blank
 - tag: `div` or blank
 - content: pull quote text
-- class: `pull-quote-left` or `pull-quote-right` and `dxp-primary-color`, `pull-quote`, and `standard-padding`
+- class: `pull-quote-left` or `pull-quote-right` and `dxp-primary-color`, `pull-quote` and `standard-padding`
 
 ##### Images
-- text field: `alt` and `src` i.e. `alt=“brief description of image” src=“/documents/folder-number/folder-number/name-of-image.jpg”`
+- text field: `alt` and `src` (e.g. `alt=“brief description of image” src=“/documents/folder-number/folder-number/name-of-image.jpg”`)
 - tag: `img`
 - content: blank
 - class: blank
@@ -91,14 +91,14 @@ Basic HTML knowledge is necessary to make formatting changes to articles.
 ## Additional Editing Rules
 - Add a new block for each header.
 
-- Introduction paragraphs should be in their own block and should receive the class `introduction` in addition to `small-padding-vertiacl`.
+- Introduction paragraphs should be in their own block and should receive the class `introduction` in addition to `small-padding-vertical`.
 
 - When articles begin with a paragraph instead of a header, the `p` element should receive the class `drop-cap` in addition to `small-padding-vertical`.
 
-- Images should be uploaded to the documents and media folder corresponding to the landing page category they will be used in (i.e. /RESOURCES/LANDING PAGES/DIGITAL CONTENT HUB).
+- Images should be uploaded to the documents and media folder corresponding to the landing page category they will be used in (e.g. /RESOURCES/LANDING PAGES/DIGITAL CONTENT HUB).
 
 - You can retrieve image URLs by clicking on the image in Docs and Media and clicking on “URL” on the right hand side.
 
-- When referencing a cited source, wrap the source number in `<sup>` and `</sup>` (i.e. "Some idea taken from a specific source\<sup\>1\</sup\>.").
+- When referencing a cited source, wrap the source number in `<sup>` and `</sup>` (e.g. "Some idea taken from a specific source\<sup\>1\</sup\>.").
 
-- When creating a link, wrap the link text in `<a href="http://www.example.com">` and `</a>` (i.e. "To search the web use [Google](http://www.google.com)" should be written "To search the web use `<a href="http://www.google.com">`Google`</a>`")
+- When creating a link, wrap the link text in `<a href="http://www.example.com">` and `</a>` (e.g. "To search the web use [Google](http://www.google.com)" should be written as "To search the web use `<a href="http://www.google.com">`Google`</a>`")
