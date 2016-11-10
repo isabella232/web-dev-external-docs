@@ -21,6 +21,7 @@ pageViewer.controller(
 						function(response) {
 							$scope.wrapH2sInSections();
 							$scope.showReadingTime();
+							$scope.makeLinksOpenInNewWindow();
 							$scope.populateTableOfContents(response);
 							$scope.activateVideo();
 							$scope.activateScreenshots();
@@ -31,6 +32,10 @@ pageViewer.controller(
 				}
 			}
 		);
+
+		$scope.makeLinksOpenInNewWindow = function() {
+			$('.page-container a').attr('target', '_blank');
+		};
 
 		$scope.wrapH2sInSections = function(page) {
 			$('.page-container h2').each(function(index, h2) {
