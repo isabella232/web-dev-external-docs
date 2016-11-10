@@ -8,12 +8,12 @@ Make sure you are <a href="https://www.liferay.com/c/portal/login?p_l_id=10814" 
 
 <div class="screenshot-block">
     <img src="press-release-1.png" />
-    1. In Control Panel, go to Web Content: Home > COMPANY > PRESS RELEASES
+    1. In Control Panel, go to Web Content: Home > COMPANY > PRESS RELEASES.
 </div>
 
 <div class="screenshot-block">
     <img src="press-release-2.png" />
-    2. Create a new "Press Release" web content by clicking Add > Press Release
+    2. Create a new "Press Release" web content by clicking Add > Press Release.
 </div>
 
 <div class="screenshot-block">
@@ -21,10 +21,10 @@ Make sure you are <a href="https://www.liferay.com/c/portal/login?p_l_id=10814" 
     3. Fill out information for the press release:
 
     <ul> 
-        <li>**Title** - The title that will display on the press releases page</li>
-        <li>**Heading** - field that will be displayed on the press release page. E.g. https://www.liferay.com/press-release/ariadne-becomes-liferay-platinum-partner-in-italy</li>
+        <li>**Title** - The title that will display on the press releases page.</li>
+        <li>**Heading** - Field that will be displayed on the press release page (e.g. https://www.liferay.com/press-release/ariadne-becomes-liferay-platinum-partner-in-italy).</li>
         <li>**Subheading** *(optional)* </li>
-        <li>**Content** - press release body</li>
+        <li>**Content** - Press release body</li>
         <li>**Additional About Content** *(optional)*</li>
         <li>**Contact Info** *(optional)*</li>
     </ul>
@@ -33,7 +33,7 @@ Make sure you are <a href="https://www.liferay.com/c/portal/login?p_l_id=10814" 
 <div class="screenshot-block">
     <img src="press-release-4.png" />
     4. Categorize the press release. Go to the Categorization section and complete the following:
-    5. 
+    
     <ul>
         <li>**Type** - Press Release</li>
         <li>**Locations**</li>
@@ -44,10 +44,10 @@ Make sure you are <a href="https://www.liferay.com/c/portal/login?p_l_id=10814" 
 
 <div class="screenshot-block">
     <img src="press-release-5.png" />
-    5. Optionally, schedule the press release for a future date from the Schedule section. Note: display date and time is PST. 
+    5. Optionally, schedule the press release for a future date from the Schedule section. Note: Display date and time are PST. 
 </div>
 
 <div class="screenshot-block">
     <img src="press-release-publish.png" />
-    6. Click **Publish**
+    6. Click **Publish**.
 </div>
