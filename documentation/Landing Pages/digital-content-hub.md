@@ -1,27 +1,41 @@
 # Digital Content Hub
+> Digital Content Hub landing pages can be easily created with our one-click build.
 
 ## Intro
 Landing pages are actually web content articles with a series of embedded web content articles. This allows us to easily create and launched a new landing page without much work. However there are a few manual steps necessary.
 
 ## Creating a New Landing Page
-1. Navigate to the landing page admin page [www.liferay.com/resources/admin]("http://www.liferay.com/resources/admin")
-2. Select the desired landing page template and click "Create"
-3. You will be redirected to a new landing page
-4. Update Landing Page Title and URL
-	1. Copy the current URL and save it for step 5
-	2. Scroll to the bottom and click "Edit Landing Page"
-	3. Update title to reflect desired friendly URL (i.e. desired friendly URL: /your-new-landing-page, title: Your New Landing Page)
-	4. Save changes by clicking "Publish"
-	5. Navigate to the URL from step 1
-	6. Scroll to the bottom and click "Update URL"
-	7. The URL for your landing page should now be www.liferay.com/resources/your-new-landing-page
-5. Update embedded article titles
-	1. For each embedded article click on the "Edit" link on the left below the article
-	2. Prepend the existing title with the landing page title (i.e. "DCH Banner - /resources" > "Your New Landing Page DCH Banner - /resources")
-	3. Save changes by clicking "Publish"
-6. Edit content
+1. Navigate to the landing page admin page [http://www.liferay.com/resources/admin](http://www.liferay.com/resources/admin)
 
-## Editing Rules
+<div class="screenshot-block">
+	<img src="digital-content-hub-create.png" />
+	2. Click the template "Digital Info Hub" - This will automatically generate a new landing page 	
+</div>
+
+3.&nbsp;You will be redirected to that new landing page where you can begin configuring and editing content on it.
+
+## Configuring Your Newly Created Landing Page
+1. Copy the current URL and save it for step 5
+
+<div class="screenshot-block">
+	<img src="digital-content-hub-edit.png" />
+	2. Scroll to the bottom and click "Edit Landing Page"
+</div>
+
+3. Update title to reflect desired friendly URL (i.e. desired friendly URL: `/your-new-landing-page`, title: Your New Landing Page)
+4. Save changes by clicking "Publish"
+5. Navigate to the URL from step 1
+6. Scroll to the bottom and click "Update URL"
+7. The URL for your landing page should now be www.liferay.com/resources/your-new-landing-page
+
+## Updating Articles
+1. For each embedded article click on the "Edit" link on the left below the article
+2. Prepend the existing title with the landing page title (i.e. "DCH Banner - /resources" > "Your New Landing Page DCH Banner - /resources")
+3. Save changes by clicking "Publish"
+
+## Editing Rules for Content Authors
+Basic HTML knowledge is necessary to make formatting changes to articles.
+
 ### Article
 - class: `max-med`
 
