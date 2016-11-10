@@ -8,7 +8,9 @@ There are two ways to localize content on Liferay.com: 1) Live edit 2) Through W
 *Watch*: Web Team explains the two different ways to make translation changes to any web content.
 
 ## Translating Through Live Edit
-6.2 allows for Live Edit capabilities where you click on the text you want to change, make the change, click save, and you’re done. 
+6.2 allows for Live Edit capabilities where you click on the text you want to change, make the change, click save, and you’re done.
+
+*Note: You need a modern browser to leverage this feature i.e. no Internet Explorer* 
 
 How to Live Edit:
 
@@ -53,7 +55,7 @@ How to translate through web content editor:
 
 <div class="screenshot-block">
     <img src="localization-web-content-3.png" />
-    4. It will open a new modal with the current web content's translation. Find the text you need to translate and replace with your translated copy.
+    4. It will open a new window with the current web content's translation. Find the text you need to translate and replace with your translated copy.
 </div>
 
 <div class="screenshot-block">

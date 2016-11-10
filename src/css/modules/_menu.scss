@@ -1,9 +1,5 @@
-pageslide {
+.ng-pageslide {
 	opacity: 0.9;
-
-	@include respond-to(widescreen) {
-		width: 30% !important;
-	}
 }
 
 .menu {
