@@ -23,9 +23,21 @@ Easy guides for content authors making changes to Liferay.com
  
 Changes should reflect on the live site in a few minutes.
 
-**Images / Screenshots**
+**Images**
 
 To add images just use plain ol' HTML and put the images in the same directory as the file. `<img src="my-image-in-the-same-directory.jpg" />`
+
+**Screenshot Functionality**
+
+To leverage screenshot zooming feature, wrap your image and content in a div with class `screenshot-block`
+
+E.g.
+```
+<div class="screenshot-block">
+    <img src="case-studies-upload-3.png" />
+    1. Log in to Lifereay
+</div>
+```
 
 ## Writing Instructions and Guidelines
 
@@ -39,11 +51,6 @@ To add images just use plain ol' HTML and put the images in the same directory a
 **General Rules**
 
 1. Need an H1 for Title. Break up sections by H2. This ensures page title and sectioning is done accurately
-
-**Writing Guidelines**
-
-1. Include an Intro as the first section. 
-2. Try to include a video screencast as reading tech instructions can be hard
 
 Great resources:
 - https://jacobian.org/writing/great-documentation/
