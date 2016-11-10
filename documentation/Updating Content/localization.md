@@ -60,7 +60,7 @@ How to translate through web content editor:
 
 <div class="screenshot-block">
     <img src="localization-web-content-save.png" />
-    5. When done replacing proper translation, click Save. The modal will close.
+    5. When done replacing proper translation, click Save. The window will close.
 </div>
 
 <div class="screenshot-block">
