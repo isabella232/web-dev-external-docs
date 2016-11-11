@@ -1,0 +1,54 @@
+/* ---------- Animation ---------- */
+$transitionVeryFast: all 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+$transitionFast: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+$transitionNormal: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+$transitionSlow: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+/* ---------- Borders ---------- */
+
+$borderRadius: 3px;
+
+/* ---------- Colors ---------- */
+
+$accentColor: #00B8B9;
+$altFontColor: #909295;
+$altPrimaryColor: #005B96;
+$altSecondaryColor: #1B3A6A;
+$complementaryColor: #F5A11D;
+$elementColor: #E3E4E5;
+$fontColor: #4C4C4E;
+$primaryColor: #1C75B9;
+$secondaryColor: #124680;
+
+/* ---------- Responsive ---------- */
+
+$phone: 400px;
+$phablet: 550px;
+$tablet: 750px;
+$desktop: 1000px;
+$widescreen: 1200px;
+
+@mixin respond-to($point) {
+	@if $point == widescreen {
+		@media (min-width: $widescreen) { @content ; }
+	}
+	@else if $point == desktop {
+		@media (max-width: $desktop) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (max-width: $tablet) { @content ; }
+	}
+	@else if $point == phablet {
+		@media (max-width: 550px)  { @content ; }
+	}
+	@else if $point == phone {
+		@media (max-width: 400px)  { @content ; }
+	}
+}
+
+/* ---------- Spacing ---------- */
+
+$largeSpacing: 3em;
+$smallSpacing: 0.5em;
+$standardSpacing: 1em;
+

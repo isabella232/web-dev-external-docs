@@ -1,0 +1,201 @@
+/* clearfix */
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+/* scaffolding */
+
+.block-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-start {
+	justify-content: flex-start;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.justfy-space-between {
+	justify-content: space-between;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.align-center {
+	align-items: center;
+}
+
+/* utilities */
+
+.no-padding {
+	padding: 0;
+}
+
+.no-padding-horizontal {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.no-padding-vertical {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+.large-margin-bottom {
+	margin-bottom: $largeSpacing;
+}
+
+.large-padding {
+	padding: $largeSpacing;
+}
+
+.large-padding-horizontal {
+	padding-left: $largeSpacing;
+	padding-right: $largeSpacing;
+}
+
+.large-padding-vertical {
+	padding-bottom: $largeSpacing;
+	padding-top: $largeSpacing;
+}
+
+.section-padding {
+	padding-bottom: 6em;
+	padding-top: 5em;
+}
+
+.small-margin-bottom {
+	margin-bottom: $smallSpacing;
+}
+
+.small-padding {
+	padding: $smallSpacing;
+}
+
+.small-padding-horizontal {
+	padding-left: $smallSpacing;
+	padding-right: $smallSpacing;
+}
+
+.small-padding-vertical {
+	padding-bottom: $smallSpacing;
+	padding-top: $smallSpacing;
+}
+
+.standard-padding {
+	padding: $standardSpacing;
+}
+
+.standard-padding-horizontal {
+	padding-left: $standardSpacing;
+	padding-right: $standardSpacing;
+}
+
+.standard-padding-vertical {
+	padding-bottom: $standardSpacing;
+	padding-top: $standardSpacing;
+}
+
+.standard-margin-bottom {
+	margin-bottom: $standardSpacing;
+}
+
+.text-center {
+	text-align: center
+}
+
+.text-left {
+	text-align: left
+}
+
+.text-right {
+	text-align: right
+}
+
+/* UI */
+
+.link {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.fill {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.show {
+	opacity: 1;
+	z-index: 2;
+}
+
+.transition-normal {
+	transition: all 0.25s ease-in;
+
+	&:hover {
+		transition: all 0.25s ease-in;
+	}
+}
+
+.hide {
+	opacity: 0;
+	z-index: -1;
+}
+
+.diminish {
+	opacity: 0.5 !important;
+	transition: opacity 0.5s ease-in;
+}
+
+/* z-index */
+
+.z0 {
+	z-index: 0
+}
+
+.z1 {
+	z-index: 1
+}
+
+.z10 {
+	z-index: 10
+}
+
+.z100 {
+	z-index: 100
+}
+
+.z1000 {
+	z-index: 1000
+}

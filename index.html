@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+    <title>Liferay.com Documentation and Guidelines</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300i,400,600,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="src/app.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/src/images/icons/favicon.ico">
+    <meta content="width=device-width" name="viewport">
+    <meta name="robots" content="NONE, NOINDEX, NOFOLLOW, NOODP">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body initialisation ng-app="lrdcom" route-css-classnames>
+
+    <!-- Background -->
+    <div class="page-bg" ng-controller="backgroundController" ng-include="'src/app/modules/background/background.view.html'"></div>
+
+    <!-- Main Wrapper -->
+    <div id="wrapper" ng-controller="mainController">
+
+        <!-- Header & Menu -->
+        <div ng-include="'src/templates/header.html'"></div>
+
+        <!-- Search Bar -->
+        <div ng-include="'src/app/modules/search/search.view.html'"></div>
+
+        <!-- Main Content Display-->
+        <div id="main">
+            <div class="inner" ng-controller="pageViewerController">
+                <!-- article table of contents -->
+                <div class="table-of-contents" ng-include="'src/app/modules/page-viewer/table-of-contents.view.html'"></div>
+
+                <!-- dynamically loaded content -->
+                <div class="anim-fade anim-in-out page-container" data-anim-speed="500" ui-view></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div ng-include="'src/templates/footer.html'"></div>
+
+    </div>
+
+    <!-- our App -->
+    <script src="src/app.min.js"></script>
+</body>
+
+</html>

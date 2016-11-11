@@ -1,0 +1,38 @@
+.ng-pageslide {
+	opacity: 0.9;
+}
+
+.menu {
+	background: $primaryColor;
+	height: 100vh;
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			color: #FFF;
+			font-weight: 200;
+			line-height: 1.2;
+			list-style-type: none;
+			padding: 0;
+
+			&.category {
+				font-size: 1.2em;
+				font-weight: 500;
+				line-height: 1.5em;
+			}
+
+			a {
+				border-width: 0;
+				color: #FFF;
+				font-size: .7em;
+
+				&:hover {
+					cursor: pointer;
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+}

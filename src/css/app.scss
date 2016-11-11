@@ -1,0 +1,59 @@
+// base styles
+@import 'normalize';
+@import 'variables';
+@import 'layout';
+@import 'typography';
+@import 'forms';
+@import 'buttons';
+@import 'utilities';
+
+// plugins
+@import 'vendor/angular-tooltips.min';
+@import 'vendor/anim-in-out';
+
+// modules
+@import 'modules/search';
+@import 'modules/menu';
+@import 'modules/page-container';
+
+// pages
+@import 'pages/home';
+@import 'pages/404';
+
+html {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	.page-bg {
+		height: 100%;
+		opacity: 0;
+		position: absolute;
+		transition: all 0.25s ease-in;
+		width: 100%;
+		z-index: -1;
+
+		.overlay {
+			background: rgba(0, 0, 0, 0.75);
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+}
+
+header {
+	a.logo {
+		transition: all 0.25s ease-in;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}

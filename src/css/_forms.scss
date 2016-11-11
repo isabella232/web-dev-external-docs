@@ -1,0 +1,257 @@
+/* Form */
+
+form {
+	margin: -1em 0 2em 0;
+
+	&:after {
+		clear: both;
+		content: '';
+		display: block;
+		height: 1px;
+	}
+
+	.field {
+		float: left;
+		margin: 0 0 1.3em 0;
+		position: relative;
+		vertical-align: top;
+		width: 100%;
+	}
+
+	.half {
+		padding-left: 2em;
+		width: calc(50% + 1em) !important;
+
+		&.first {
+			padding-left: 0;
+			width: calc(50% - 1em) !important;
+		}
+	}
+
+	&:last-child,
+	.half:nth-last-child(2) {
+		margin-bottom: 0;
+	}
+
+	.actions {
+		clear: both;
+		padding-top: 1em;
+		position: relative;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	form .half {
+		padding-left: 0;
+		width: 100% !important;
+
+		&.first {
+			padding-left: 0;
+			width: 100% !important;
+		}
+
+		&:nth-last-child(2) {
+			margin: 0 0 1.3em 0;
+		}
+	}
+}
+
+label {
+	display: block;
+	font-size: 0.9em;
+	font-weight: 900;
+	margin: 0 0 1em 0;
+}
+
+input {
+	&[type="text"],
+	&[type="password"],
+	&[type="email"],
+	&[type="tel"] {
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+		background-color: transparent;
+		border-bottom: solid 1px #C9C9C9;
+		border-radius: 0;
+		border-width: 0;
+		color: inherit;
+		display: block;
+		outline: 0;
+		padding: 0;
+		text-decoration: none;
+		width: 100%;
+	}
+}
+
+select,
+textarea {
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	border-bottom: solid 1px #C9C9C9;
+	border-radius: 0;
+	border-width: 0;
+	color: inherit;
+	display: block;
+	outline: 0;
+	padding: 0;
+	text-decoration: none;
+	width: 100%;
+}
+
+input {
+	&[type="text"]:invalid,
+	&[type="password"]:invalid,
+	&[type="email"]:invalid,
+	&[type="tel"]:invalid {
+		box-shadow: none;
+	}
+}
+
+select:invalid,
+textarea:invalid {
+	box-shadow: none;
+}
+
+input {
+	&[type="text"]:focus,
+	&[type="password"]:focus,
+	&[type="email"]:focus,
+	&[type="tel"]:focus {
+		border-bottom-color: $elementColor;
+		box-shadow: inset 0 -1px 0 0 $elementColor;
+	}
+}
+
+select:focus,
+textarea:focus {
+	border-bottom-color: $elementColor;
+	box-shadow: inset 0 -1px 0 0 $elementColor;
+}
+
+.select-wrapper {
+	display: block;
+	position: relative;
+	text-decoration: none;
+
+	&:before {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		color: #C9C9C9;
+		content: '\f078';
+		display: block;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		height: 3em;
+		line-height: 3em;
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		text-transform: none !important;
+		top: 0;
+		width: 3em;
+	}
+
+	select::-ms-expand {
+		display: none;
+	}
+}
+
+input {
+	&[type="text"],
+	&[type="password"],
+	&[type="email"] {
+		height: 3em;
+	}
+}
+
+select {
+	height: 3em;
+}
+
+textarea {
+	min-height: 3.75em;
+	padding: 0;
+}
+
+input {
+	&[type="checkbox"],
+	&[type="radio"] {
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+		display: block;
+		float: left;
+		margin-right: -2em;
+		opacity: 0;
+		width: 1em;
+		z-index: -1;
+	}
+
+	&[type="checkbox"] + label,
+	&[type="radio"] + label {
+		color: #585858;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 1em;
+		font-weight: 300;
+		padding-left: 2.55em;
+		padding-right: 0.75em;
+		position: relative;
+		text-decoration: none;
+	}
+
+	&[type="checkbox"] + label:before,
+	&[type="radio"] + label:before {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
+	}
+
+	&[type="checkbox"] + label:before,
+	&[type="radio"] + label:before {
+		border: solid 1px #C9C9C9;
+		border-radius: 4px;
+		content: '';
+		display: inline-block;
+		height: 1.8em;
+		left: 0;
+		line-height: 1.725em;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		width: 1.8em;
+	}
+
+	&[type="checkbox"]:checked + label:before,
+	&[type="radio"]:checked + label:before {
+		background: #585858;
+		border-color: #585858;
+		color: #FFF;
+		content: '\f00c';
+	}
+
+	&[type="checkbox"]:focus + label:before,
+	&[type="radio"]:focus + label:before {
+		border-color: $elementColor;
+		box-shadow: 0 0 0 1px $elementColor;
+	}
+
+	&[type="checkbox"] + label:before {
+		border-radius: 4px;
+	}
+
+	&[type="radio"] + label:before {
+		border-radius: 100%;
+	}
+}
