@@ -1,0 +1,32 @@
+<h1 id="testing-environment">Testing Environment</h1>
+<blockquote>
+    <p>There are times when we want to make changes to the website but are hesitant to cause unintended changes. Having a testing environment allows us to preview the changes before we apply them on production.</p>
+</blockquote>
+<h2 id="what-is-uat-">What Is UAT?</h2>
+<p>UAT is our testing environment for liferay.com. It looks identical to the live site, but the changes made here will not be reflected on liferay.com. This makes it ideal for practicing content updates and experimenting with areas of the site.</p>
+<h2 id="accessing-uat">Accessing UAT</h2>
+<ol>
+    <li>To access UAT, simply follow the URL:
+        <a href="www-uat.liferay.com">www-uat.liferay.com</a>
+    </li>
+</ol>
+<screenshot src="uat-sign-in.png">
+    2. Sign in using your Liferay email address. Remember to add <code>.broken</code> at the end.
+</screenshot>
+
+<p>For example, Joe Bloggs would sign in with</p>
+<pre><code>User Name: joe.bloggs@liferay.com.broken
+Password: [Please ask the web team for the password.]
+</code></pre>
+<h2 id="accessing-uat-off-site">Accessing UAT Off-Site</h2>
+<p>For security reasons, accessing <a href="www-uat.liferay.com">UAT</a> off-site requires an extra step of authentication.</p>
+<screenshot src="uat-authenticate-offsite.png">
+    When you go to <a href="www-uat.liferay.com">UAT</a>, you will be prompted to enter your Liferay username and password to verify your identity.
+</screenshot>
+
+<p>For example, Joe Bloggs would authenticate with:</p>
+<pre><code>User Name: joe.bloggs
+Password: [Joe Bloggs&#39; Liferay password]
+</code></pre>
+<p>To avoid authentication before accessing <a href="www-uat.liferay.com">UAT</a>, connect to Liferay&#39;s server room using VPN.</p>
+<p>To set up VPN, please contact IT for instructions.</p>

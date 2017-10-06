@@ -1,0 +1,930 @@
+<h1 id="welcome-to-the-liferay-com-guides">Welcome to the Liferay.com Guides</h1>
+<p>To make the process of changing content easier and to ensure quality integrity, these guides have been written for our valued content authors.</p>
+
+<h1 id="blog">Blog</h1>
+<p>this is a blog</p>
+
+<h1 id="events-microsites">Events Microsites</h1>
+<blockquote>
+    <p>Supporting Liferay&#39;s year-round event marketing initiatives.</p>
+</blockquote>
+<h2 id="making-content-changes">Making Content Changes</h2>
+<p>Event microsite content changes are made primarily from <strong>OSB Marketing Events Admin</strong>, which requires the <strong>Marketing Events Administrator</strong> role. Instructions for requesting permissions can be found <a href="https://liferay.github.io/web-dev-lrdcom/#/docs/General~2Fpermissions#process-for-granting-user-roles">here</a>.</p>
+<screenshot src="admin-menu.png">
+    Once you have acquired permissions, visit the event microsite home page to access the Admin menu.
+</screenshot>
+
+<p>From the <strong>Admin menu</strong>, click: <code>Site Administration &gt; Content</code>
+</p>
+<screenshot src="site-admin-marketing-events-admin.png">
+    Then, select <strong>OSB Marketing Events Admin</strong>.
+</screenshot>
+
+<h2 id="details">Details</h2>
+<screenshot src="marketing-event-tab-details.png">
+    The information provided on the details page display in event tiles on <a href="https://www.liferay.com/events?types=1&pastEvents=false" target="_new">LRDCOM&#39;s events page</a>, on the <a href="https://www.liferay.com/events?marketingEventId=226942016"
+    target="_new">event detail pop-up</a>, as well as throughout the event microsite and events mobile app when a valid <strong>site</strong> is assigned.
+</screenshot>
+
+<h2 id="sessions">Sessions</h2>
+<screenshot src="marketing-event-tab-sessions.png">
+    Add, update, and delete sessions for display on the event microsite and mobile app&#39;s agenda. Note, sessions require adding <strong>Marketing Event Users</strong> and <strong>Marketing Event Rooms</strong>.
+</screenshot>
+
+<h2 id="users">Users</h2>
+<screenshot src="marketing-event-tab-users.png">
+    Add, update, and delete users for display on the event microsite and mobile app&#39;s agenda and speaker pages.
+</screenshot>
+
+<h2 id="rooms">Rooms</h2>
+<screenshot src="marketing-event-tab-rooms.png">
+    Add, update, and delete rooms for display on the event microsite and mobile app&#39;s agenda.
+</screenshot>
+
+<h2 id="sponsors">Sponsors</h2>
+<screenshot src="marketing-event-tab-sponsors.png">
+    Add, update, and delete sponsors and sponsorship levels for display on the event microsite and mobile app. Note, in order to add a sponsor you must add sponsorship levels first.
+</screenshot>
+
+<h2 id="announcements">Announcements</h2>
+<screenshot src="marketing-event-tab-announcements.png">
+    Add announcements to notify mobile events app users of immediate or future event info.
+</screenshot>
+
+<h2 id="changing-event-microsite-navigation">Changing Event Microsite Navigation</h2>
+<p>In general, the navigation for the events site is controlled by Site Pages. In that, any change you make to Site Pages, will reflect in the navigation.</p>
+<screenshot src="navigation-1.png">
+    The navigation on the events pages...
+</screenshot>
+
+<screenshot src="navigation-2.png">
+    ...is controlled by the Site Pages
+</screenshot>
+
+<p><strong>Ordering Navigation Items</strong>
+</p>
+<screenshot src="navigation-reorder.png">
+    Simple drag and drop pages in Site Pages to change the order of navigation.
+</screenshot>
+
+<p><strong>Hiding Navigation Items</strong>
+</p>
+<screenshot src="navigation-hiding.png">
+    Go to the page that you want to hide from the navigation and select &quot;Hide from navigation&quot;
+</screenshot>
+
+<p><strong> Make a Navigation a Link to External Site </strong>
+</p>
+<screenshot src="navigation-link.png">
+    Go to the navigation item you want to serve as a link to an external site. Under &quot;Type&quot;, select &quot;Link to URL&quot; and give the URL in the URL section
+</screenshot>
+<h1 id="events-app">Events App</h1>
+<h2 id="front-menu-screen">Front / Menu Screen</h2>
+<p>Once an active event has been selected, the front / menu screen is shown. Depending on how the event is configured, the Event Connect feature may or may not be enabled.</p>
+<p>The following menu items are shown:</p>
+<ul>
+    <li>Agenda</li>
+    <li>Event Connect or Maps, if Event Connect disabled</li>
+    <li>Sponsors</li>
+    <li>Contacts</li>
+    <li>Maps or Activities, if Event Connect disabled</li>
+    <li>Gallery</li>
+</ul>
+<div class="screenshot-block">
+    Here is how the menu looks with EventConnect enabled:
+    <img src="dist/pages/assets/eventsapp_menu_eventconnect.png">
+</div>
+
+<div class="screenshot-block">
+    Here is how the menu looks with EventConnect disabled:
+    <img src="dist/pages/assets/eventsapp_menu_noeventconnect.png">
+</div>
+
+
+<h1 id="permissions">Permissions</h1>
+<blockquote>
+    <p>Let&#39;s make sure someone doesn&#39;t break the website.</p>
+</blockquote>
+<h2 id="overview">Overview</h2>
+<p>It is imperative that changes to the following areas on Liferay.com are closely monitored since they can all have a significant impact on a user&#39;s experience.</p>
+<ul>
+    <li>Web Content</li>
+    <li>Structures/Templates</li>
+    <li>Documents &amp; Media</li>
+    <li>DDLs</li>
+    <li>Page Information</li>
+</ul>
+<p>The user roles and permissions outlined below help mitigate the possibility of accidentally breaking part/all of our site (You are all amazing and I know you would never do that. But... just in case.). With great power comes great responsibility. Use
+    your powers wisely.</p>
+<h2 id="key-roles-we-ve-identified-for-our-site">Key roles we&#39;ve identified for our site</h2>
+<ul>
+    <li><strong>Asset Uploader:</strong> users who can upload documents to the documents and media library.</li>
+    <li><strong>Content Editor:</strong> users who can edit content. They are able to add and update web content articles as well as update page information.</li>
+    <li><strong>DDL Administrator:</strong> users who can edit and add items to Dynamic Data Lists.</li>
+    <li><strong>Marketing Events Administrator:</strong> users who can add and edit marketing events.</li>
+    <li><strong>Role Delegator:</strong> users who can assign roles to other users in their given site.</li>
+</ul>
+<h2 id="process-for-granting-user-roles">Process for granting user roles</h2>
+<ol>
+    <li>Create an LRIS Ticket on JIRA (this acts as a written record of the request).</li>
+    <li>Included in the ticket should be the following information:
+        <ul>
+            <li>User who needs the permission. Use @include syntax (eg: @bryan.cheung).</li>
+            <li>What roles the user needs.</li>
+            <li>Why the user needs the roles.</li>
+        </ul>
+    </li>
+    <li>Leave a comment on the ticket with the names of people who should be notified about the updated permissions.</li>
+    <li>Get familiar with your new roles here (coming soon).</li>
+</ol>
+
+<h1 id="working-with-web-team">Working with Web Team</h1>
+<blockquote>
+    <p>Getting web team to do quality work for you!</p>
+</blockquote>
+<h2 id="overview">Overview</h2>
+<p>
+    <img src="dist/pages/assets/web-team-tickets.svg" />
+</p>
+<h2 id="examples-of-great-tickets">Examples of Great Tickets</h2>
+<ul>
+    <li><a href="https://issues.liferay.com/browse/LRIS-27550">Example 1</a>
+    </li>
+    <li><a href="https://issues.liferay.com/browse/LRIS-27643">Example 2</a>
+    </li>
+    <li><a href="https://issues.liferay.com/browse/LRIS-27418">Example 3</a>
+    </li>
+</ul>
+<h2 id="other-tips">Other Tips</h2>
+<p>Other things that can ensure success:</p>
+<ul>
+    <li>If there are design assets, please version them (e.g. <code>banner_v1.jpg</code>) so we know which version is most current.</li>
+</ul>
+
+<h1 id="digital-content-hub">Digital Content Hub</h1>
+<blockquote>
+    <p>Digital Content Hub landing pages can be easily created with our one-click build.</p>
+</blockquote>
+<h2 id="intro">Intro</h2>
+<p>Landing pages are actually web content articles with a series of embedded web content articles. This allows us to create and launch a new landing page without much work. However, there are a few necessary manual steps.</p>
+<h2 id="creating-a-new-landing-page">Creating a New Landing Page</h2>
+<ol>
+    <li>Navigate to the landing page admin page <a href="http://www.liferay.com/resources/admin">http://www.liferay.com/resources/admin</a>.</li>
+    <li>
+        <screenshot src="digital-content-hub-create.png">Select &quot;Digital Info Hub&quot; as the Landing Page Type.</screenshot>
+    </li>
+    <li>Fill out the form. Keep in mind that the title should reflect your desired friendly URL.
+        <ul>
+            <li>Example: For the title &quot;This Is My Title&quot; the friendly URL would be <code>/this-is-my-title</code>.</li>
+        </ul>
+    </li>
+    <li>Submit the form. You will be redirected to that new landing page where you can begin to configure and edit content.
+        <ul>
+            <li>Generating the new Landing Page may take a while so don&#39;t panic if you have to wait a minute or two.</li>
+        </ul>
+    </li>
+</ol>
+<h2 id="updating-articles">Updating Articles</h2>
+<ol>
+    <li>For each embedded article, click on the &quot;Edit&quot; link on the left below the article.</li>
+    <li>Prepend the existing title with the landing page title (e.g. &quot;DCH Banner - /resources&quot; &gt; &quot;Your New Landing Page DCH Banner - /resources&quot;).</li>
+    <li>Save changes by clicking &quot;Publish.&quot;</li>
+</ol>
+<h2 id="editing-rules-for-content-authors">Editing Rules for Content Authors</h2>
+<p>Basic HTML knowledge is necessary to make formatting changes to articles.</p>
+<h3 id="article">Article</h3>
+<ul>
+    <li>class: <code>max-med</code>
+    </li>
+</ul>
+<h3 id="section">Section</h3>
+<ul>
+    <li>text field: blank</li>
+    <li>class: blank</li>
+</ul>
+<h3 id="block">Block</h3>
+<ul>
+    <li>text field: blank</li>
+    <li>class: <code>standard-padding-vertical</code>
+    </li>
+</ul>
+<h3 id="element">Element</h3>
+<h5 id="headers">Headers</h5>
+<ul>
+    <li>text field: blank</li>
+    <li>tag: <code>h2</code>, <code>h3</code> or <code>h4</code>
+    </li>
+    <li>content: header text</li>
+    <li>class: blank</li>
+</ul>
+<h5 id="paragraphs">Paragraphs</h5>
+<ul>
+    <li>text field: blank</li>
+    <li>tag: <code>p</code>
+    </li>
+    <li>content: paragraph text (see additional editing rules for special use cases)</li>
+    <li>class: <code>small-padding-vertical</code>
+    </li>
+</ul>
+<h5 id="source-text">Source text</h5>
+<ul>
+    <li>text field: blank</li>
+    <li>tag: <code>div</code> or blank</li>
+    <li>content: source text</li>
+    <li>class: <code>source-text</code>
+    </li>
+</ul>
+<h5 id="pull-quotes">Pull Quotes</h5>
+<ul>
+    <li>text field: blank</li>
+    <li>tag: <code>div</code> or blank</li>
+    <li>content: pull quote text</li>
+    <li>class: <code>pull-quote-left</code> or <code>pull-quote-right</code> and <code>dxp-primary-color</code>, <code>pull-quote</code> and <code>standard-padding</code>
+    </li>
+</ul>
+<h5 id="images">Images</h5>
+<ul>
+    <li>text field: <code>alt</code> and <code>src</code> (e.g. <code>alt=&quot;brief description of image&quot; src=&quot;/documents/folder-number/folder-number/name-of-image.jpg&quot;</code>)</li>
+    <li>tag: <code>img</code>
+    </li>
+    <li>content: blank</li>
+    <li>class: blank</li>
+</ul>
+<h5 id="lists">Lists</h5>
+<ul>
+    <li>text field: blank</li>
+    <li>tag: <code>ul</code>
+    </li>
+    <li>content: wrap each list item in <code>&lt;li&gt;&lt;/li&gt;</code> (i.e. \
+        <li\>Your content here\</li\>)</li>
+    <li>class: <code>small-padding-vertical</code>
+    </li>
+</ul>
+<h5 id="tables">Tables</h5>
+<ul>
+    <li>Please check back soon for documentation on tables.</li>
+</ul>
+<h2 id="additional-editing-rules">Additional Editing Rules</h2>
+<ul>
+    <li>
+        <p>Add a new block for each header.</p>
+    </li>
+    <li>
+        <p>Introduction paragraphs should be in their own block and should receive the class <code>introduction</code> in addition to <code>small-padding-vertical</code>.</p>
+    </li>
+    <li>
+        <p>When articles begin with a paragraph instead of a header, the <code>p</code> element should receive the class <code>drop-cap</code> in addition to <code>small-padding-vertical</code>.</p>
+    </li>
+    <li>
+        <p>Images should be uploaded to the documents and media folder corresponding to the landing page category they will be used in (e.g. /RESOURCES/LANDING PAGES/DIGITAL CONTENT HUB).</p>
+    </li>
+    <li>
+        <p>You can retrieve image URLs by clicking on the image in Docs and Media and clicking on &quot;URL&quot; on the right hand side.</p>
+    </li>
+    <li>
+        <p>When referencing a cited source, wrap the source number in <code>&lt;sup&gt;</code> and <code>&lt;/sup&gt;</code> (e.g. &quot;Some idea taken from a specific source\
+            <sup\>1\</sup\>.&quot;).</p>
+    </li>
+    <li>
+        <p>When creating a link, wrap the link text in <code>&lt;a href=&quot;http://www.example.com&quot;&gt;</code> and <code>&lt;/a&gt;</code> (e.g. &quot;To search the web use <a href="http://www.google.com">Google</a>&quot; should be written as &quot;To
+            search the web use <code>&lt;a href=&quot;http://www.google.com&quot;&gt;</code>Google<code>&lt;/a&gt;</code>&quot;)</p>
+    </li>
+</ul>
+<h2 id="updating-the-friendly-url-of-your-landing-page">Updating the friendly URL of your landing page</h2>
+<p>If you need to update the friendly URL for some reason follow these steps:</p>
+<ol>
+    <li>Copy the current URL and save it for step five.</li>
+    <li>
+        <screenshot src="digital-content-hub-edit.png">Scroll to the bottom and click &quot;Edit Landing Page.&quot;</screenshot>
+    </li>
+    <li>Update title to reflect desired friendly URL (e.g. Desired friendly URL: <code>/your-new-landing-page</code>, Title: Your New Landing Page).</li>
+    <li>Save changes by clicking &quot;Publish.&quot;</li>
+    <li>Navigate to the URL from step one.</li>
+    <li>Scroll to the bottom and click &quot;Update URL.&quot;</li>
+    <li>The URL for your landing page should now be www.liferay.com/resources/your-new-landing-page.</li>
+</ol>
+
+<h1 id="landing-page-creation">Landing Page Creation</h1>
+<h2 id="intro">Intro</h2>
+<p>Landing pages are actually web content articles with a series of embedded web content articles. This allows us to easily create and launched a new landing page without much work. However there are a few manual steps necessary.</p>
+<h2 id="creating-a-new-landing-page">Creating a New Landing Page</h2>
+<ol>
+    <li>Navigate to the landing page admin page <a href="&quot;http://www.liferay.com/resources/admin&quot;">www.liferay.com/resources/admin</a>
+    </li>
+    <li>Select the desired landing page template and click &quot;Create&quot;</li>
+    <li>You will be redirected to a new landing page</li>
+    <li>Update Landing Page Title and URL
+        <ol>
+            <li>Copy the current URL and save it for step 5</li>
+            <li>Scroll to the bottom and click &quot;Edit Landing Page&quot;</li>
+            <li>Update title to reflect desired friendly URL (i.e. desired friendly URL: /your-new-landing-page, title: Your New Landing Page)</li>
+            <li>Save changes by clicking &quot;Publish&quot;</li>
+            <li>Navigate to the URL from step 1</li>
+            <li>Scroll to the bottom and click &quot;Update URL&quot;</li>
+            <li>The URL for your landing page should now be www.liferay.com/resources/your-new-landing-page</li>
+        </ol>
+    </li>
+    <li>Update embedded article titles
+        <ol>
+            <li>For each embedded article click on the &quot;Edit&quot; link on the left below the article</li>
+            <li>Prepend the existing title with the landing page title (i.e. &quot;DCH Banner - /resources&quot; &gt; &quot;Your New Landing Page DCH Banner - /resources&quot;)</li>
+            <li>Save changes by clicking &quot;Publish&quot;</li>
+        </ol>
+    </li>
+    <li>Edit content</li>
+</ol>
+<h2 id="editing-rules">Editing Rules</h2>
+<h3 id="article">Article</h3>
+<ul>
+    <li>class: <code>max-med</code>
+    </li>
+</ul>
+<h3 id="section">Section</h3>
+<ul>
+    <li>text field: blank</li>
+    <li>class: blank</li>
+</ul>
+<h3 id="block">Block</h3>
+<ul>
+    <li>text field: blank</li>
+    <li>class: <code>standard-padding-vertical</code>
+    </li>
+</ul>
+<h3 id="element">Element</h3>
+<h5 id="headers">Headers</h5>
+<ul>
+    <li>text field: blank</li>
+    <li>tag: <code>h2</code>, <code>h3</code>, or <code>h4</code>
+    </li>
+    <li>content: header text</li>
+    <li>class: blank</li>
+</ul>
+<h5 id="paragraphs">Paragraphs</h5>
+<ul>
+    <li>text field: blank</li>
+    <li>tag: <code>p</code>
+    </li>
+    <li>content: paragraph text (see additional editing rules for special use cases)</li>
+    <li>class: <code>small-padding-vertical</code>
+    </li>
+</ul>
+<h5 id="source-text">Source text</h5>
+<ul>
+    <li>text field: blank</li>
+    <li>tag: <code>div</code> or blank</li>
+    <li>content: source text</li>
+    <li>class: <code>source-text</code>
+    </li>
+</ul>
+<h5 id="pull-quotes">Pull Quotes</h5>
+<ul>
+    <li>text field: blank</li>
+    <li>tag: <code>div</code> or blank</li>
+    <li>content: pull quote text</li>
+    <li>class: <code>pull-quote-left</code> or <code>pull-quote-right</code> and <code>dxp-primary-color</code>, <code>pull-quote</code>, and <code>standard-padding</code>
+    </li>
+</ul>
+<h5 id="images">Images</h5>
+<ul>
+    <li>text field: <code>alt</code> and <code>src</code> i.e. <code>alt=“brief description of image” src=“/documents/folder-number/folder-number/name-of-image.jpg”</code>
+    </li>
+    <li>tag: <code>img</code>
+    </li>
+    <li>content: blank</li>
+    <li>class: blank</li>
+</ul>
+<h5 id="lists">Lists</h5>
+<ul>
+    <li>text field: blank</li>
+    <li>tag: <code>ul</code>
+    </li>
+    <li>content: wrap each list item in <code>&lt;li&gt;&lt;/li&gt;</code> (i.e. \
+        <li\>Your content here\</li\>)</li>
+    <li>class: <code>small-padding-vertical</code>
+    </li>
+</ul>
+<h5 id="tables">Tables</h5>
+<ul>
+    <li>Please check back soon for documentation on tables.</li>
+</ul>
+<h2 id="additional-editing-rules">Additional Editing Rules</h2>
+<ul>
+    <li>
+        <p>Add a new block for each header.</p>
+    </li>
+    <li>
+        <p>Introduction paragraphs should be in their own block and should receive the class <code>introduction</code> in addition to <code>small-padding-vertiacl</code>.</p>
+    </li>
+    <li>
+        <p>When articles begin with a paragraph instead of a header, the <code>p</code> element should receive the class <code>drop-cap</code> in addition to <code>small-padding-vertical</code>.</p>
+    </li>
+    <li>
+        <p>Images should be uploaded to the documents and media folder corresponding to the landing page category they will be used in (i.e. /RESOURCES/LANDING PAGES/DIGITAL CONTENT HUB).</p>
+    </li>
+    <li>
+        <p>You can retrieve image URLs by clicking on the image in Docs and Media and clicking on “URL” on the right hand side.</p>
+    </li>
+    <li>
+        <p>When referencing a cited source, wrap the source number in <code>&lt;sup&gt;</code> and <code>&lt;/sup&gt;</code> (i.e. &quot;Some idea taken from a specific source\
+            <sup\>1\</sup\>.&quot;).</p>
+    </li>
+    <li>
+        <p>When creating a link, wrap the link text in <code>&lt;a href=&quot;http://www.example.com&quot;&gt;</code> and <code>&lt;/a&gt;</code> (i.e. &quot;To search the web use <a href="http://www.google.com">Google</a>&quot; should be written &quot;To search
+            the web use <code>&lt;a href=&quot;http://www.google.com&quot;&gt;</code>Google<code>&lt;/a&gt;</code>&quot;)</p>
+    </li>
+</ul>
+
+<h1 id="updating-landing-page-seo-information">Updating Landing Page SEO Information</h1>
+<h2 id="intro">Intro</h2>
+<p>Updating SEO information for Landing Pages is slightly different than for other pages on liferay.com.</p>
+<p>Landing pages have URLs like these:</p>
+<ul>
+    <li><code>www.liferay.com/l/my-landing-page</code>
+    </li>
+    <li><code>www.liferay.com/resources/l/my-landing-page</code>
+    </li>
+</ul>
+<h2 id="edit-seo-info">Edit SEO Info</h2>
+<ol>
+    <li>
+        <p>Navigate to the landing page you want to update.</p>
+    </li>
+    <li>
+        <p>Scroll to the bottom of the page.</p>
+    </li>
+    <li>
+        <screenshot src="landing-page-seo-edit-landing-page.png">
+            Click &quot;Edit Landing Page&quot;.
+        </screenshot>
+    </li>
+    <li>
+        <screenshot src="landing-page-seo-click-custom-fields.png">
+            Choose &quot;Custom Fields&quot; from the side menu.
+        </screenshot>
+    </li>
+    <li>
+        <screenshot src="landing-page-seo-select-translation.png">
+            Choose the flags corresponding to the translation you are updating.
+        </screenshot>
+    </li>
+    <li>
+        <screenshot src="landing-page-seo-update-custom-fields.png">
+            Update the SEO information.
+        </screenshot>
+    </li>
+    <li>
+        <screenshot src="landing-page-seo-publish.png">
+            Publish your changes.
+        </screenshot>
+    </li>
+</ol>
+
+<h1 id="creating-a-new-marketing-blog-entry">Creating a New Marketing Blog Entry</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Our new marketing blogs platform is here. Creating content for the world to see is as easy as ever. We&#39;ve utilized the built in Blogs Portlet for content creation. All the data is currently stored on our web.liferay.com instance but is displayed with
+    the latest and greatest styles on www.liferay.com. If you have any questions that aren&#39;t answered below, don&#39;t hesitate to contact the web team.</p>
+<h2 id="preparation">Preparation</h2>
+<h3 id="image-guidelines">Image Guidelines</h3>
+<p>What size, resolution and file types should your images be?</p>
+<ul>
+    <li>Image <strong>size</strong> should be no larger than 200kb.</li>
+    <li><strong>Resolution</strong> may vary, but should adhere to the following:
+        <ul>
+            <li>Cover images, which appear as featured post header backgrounds on blog category pages should be 16:9 or 4:3 (i.e., 1280x800).</li>
+            <li>Images appearing within a blog post may vary, but should be between 640px to 980px wide.</li>
+        </ul>
+    </li>
+    <li><strong>File types</strong> should adhere to the following:
+        <ul>
+            <li>JPG: in most cases an optimized jpg should be used for images with millions of colors including photographs and graphics with a variety of shades and gradients.</li>
+            <li>GIF/PNG: best for line art/cartoon-like graphics and images with transparent backgrounds.</li>
+        </ul>
+    </li>
+</ul>
+<h3 id="resources">Resources</h3>
+<ul>
+    <li>image resizing: <a href="http://birme.net/">birme.net</a>
+    </li>
+    <li>optimizing: <a href="https://tinyjpg.com/">tinyjpg.com</a>
+    </li>
+    <li>image conversion: <a href="https://cloudconvert.com">cloudconvert.com</a>
+    </li>
+</ul>
+<h3 id="where-do-i-store-my-images-">Where do I store my images?</h3>
+<p>Upload blog images to <a href="https://web.liferay.com/group/control_panel/manage?p_p_id=20&amp;p_p_lifecycle=0&amp;p_p_state=maximized&amp;p_p_mode=view&amp;doAsGroupId=14&amp;_20_struts_action=%2Fdocument_library%2Fview&amp;_20_folderId=88321876">web.liferay.com</a> Documents
+    &amp; Media in the <code>/Blogs</code> folder.</p>
+<p>Navigating to the Blogs folder is easy from /marketing-blogs-admin. Go To &gt; Control Panel &gt; Documents and Media</p>
+<h2 id="creating-a-blog-entry">Creating a Blog Entry</h2>
+<ol>
+    <li>Navigate to the <a href="https://web.liferay.com/marketing-blogs-admin">Marketing Blogs Admin</a> page.
+        <ul>
+            <li>For practicing, please use the <a href="https://web-uat.liferay.com/marketing-blogs-admin">UAT Marketing Blogs Admin</a> page on our User Acceptance Testing (UAT) environment.</li>
+        </ul>
+    </li>
+    <li>Select &quot;Add New Entry.&quot; If you don&#39;t see the button you probably don&#39;t have the correct permissions. Find out how to request them <a href="https://liferay.github.io/web-dev-lrdcom/#/docs/General~2Fpermissions">here</a>.</li>
+    <li>Fill in the Title and Content (see &quot;Editing Content&quot; for more information on editing content).</li>
+    <li>Select an option for the &quot;Marketing Blogs&quot; category (Digital Business, Digital Transformation, etc.). Only choose one (see &quot;Important Notes&quot; section).
+        <ul>
+            <li>If you do not see the category you are looking for please contact someone from web team and we can add it for you. Depending on our current workload, you may be asked to open a JIRA ticket.</li>
+        </ul>
+    </li>
+    <li>Publish your new blog.</li>
+</ol>
+<h2 id="viewing-a-blog-entry">Viewing a Blog Entry</h2>
+<ol>
+    <li>To view your new creation in all its glory, visit <code>www.liferay.com/blog/{region}/{category}/{your-new-blog-title-hyphenated}</code>
+        <ul>
+            <li>For practice blogs use <code>wwww-uat.liferay.com/{region}/{category}/{your-new-blog-title-hyphenated}</code>
+            </li>
+            <li>Example: www.liferay.com/blog/en-us/customer-experience/we-ve-only-just-begun-
+                <ul>
+                    <li>region: en-us</li>
+                    <li>category: customer-experience</li>
+                    <li>blog url title: we-ve-only-just-begun- (&quot;We&#39;ve Only Just Begun!&quot;)
+                        <br>Note: punctuation in the blog title will be replaced with a hyphen in the url title</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ol>
+<h2 id="editing-content">Editing Content</h2>
+<ul>
+    <li>For information on how to add a blog entry, please see the <a href="https://dev.liferay.com/discover/portal/-/knowledge_base/6-1/expressing-yourself-using-blogs#adding-blog-entries">Liferay Documentation</a> on adding a blog entry.</li>
+    <li>To add an image to your blog entry:
+        <ul>
+            <li>
+                <screenshot src="add-image.png">Select the &quot;Image&quot; button on the editor.</screenshot>
+            </li>
+            <li>
+                <screenshot src="image-url.png">Paste the full URL of the desired image into the URL field of the pop-up.</screenshot>
+            </li>
+            <li>
+                <screenshot src="save-img.png">Select &quot;Ok.&quot;</screenshot>
+            </li>
+        </ul>
+    </li>
+    <li>Upload images to web.liferay.com Documents &amp; Media in the <code>/Blogs</code> folder.
+        <ul>
+            <li>Navigating to the Blogs folder is easy from /marketing-blogs-admin. Go To &gt; Control Panel &gt; Documents and Media</li>
+        </ul>
+    </li>
+    <li>Avoid using the copy/paste functionality to add content to your blog entry. Only use it if you are copying plain text (from a .txt file) exclusively.</li>
+    <li>When adding a table, please solicit the help of a webteam member.</li>
+</ul>
+<h2 id="blog-category-topic-seo-information">Blog Category/Topic SEO Information</h2>
+<p>To populate SEO information for both Blog Categories and Topics:</p>
+<ul>
+    <li>Go to Category section in Control Panel</li>
+    <li>Go to &quot;Marketing Blogs&quot; Category</li>
+    <li>
+        <screenshot src="seo-category.png">Within the category you want to alter the description for, select the category, then hit add a category property by hitting &quot;Edit&quot;</screenshot>
+    </li>
+    <li>
+        <screenshot src="seo-category-description.png">Property Key: <code>description</code>.
+            <br/>Property Value: <code>[Enter the category description]</code>
+        </screenshot>
+    </li>
+    <li>Hit Save</li>
+</ul>
+<h2 id="important-notes">Important Notes</h2>
+<screenshot src="dont-choose-parent.png">
+    When selecting an option for &quot;Marketing Blogs&quot; <strong>make sure the parent folders of the category you choose are not selected.</strong>
+</screenshot>
+<h1 id="case-studies">Case Studies</h1>
+<blockquote>
+    <p>Case studies are an important marketing piece for Liferay&#39;s web presence. Here&#39;s how to add them quickly.</p>
+</blockquote>
+<h2 id="adding-a-case-study">Adding a Case Study</h2>
+<ol>
+    <li>Log in and Go to Control Panel.</li>
+    <li>Go to Web Content and Navigate to &gt; <strong>Web Content &gt; RESOURCES &gt; CASE STUDIES.</strong>
+    </li>
+</ol>
+<screenshot src="case-studies-1.png">
+    3. Click <strong>Add &gt; Case Study</strong>.
+</screenshot>
+
+<screenshot src="case-studies-guide.jpg">
+    4. Fill out case study page according to this guide:
+</screenshot>
+
+<screenshot src="case-studies-2.png">
+    5. We need to provide the company summary shown on the Resources home page...
+</screenshot>
+
+<screenshot src="case-studies-abstract.png">
+    6. ...by going to <strong>Abstract</strong> and filling out <strong>Summary</strong> information.
+</screenshot>
+
+<screenshot src="case-studies-categorization.png">
+    7. Categorize the Case Study by hitting the <strong>Categorization</strong> Tab. All of these categories must be selected; otherwise the Case Study will not be shown.
+    <ul>
+        <li>Category List Filter: Resources</li>
+        <li>Industries</li>
+        <li>Language</li>
+        <li>Locations</li>
+        <li>Resource Types: Case Studies</li>
+        <li>Solutions</li>
+    </ul>
+    <br>
+</screenshot>
+
+<h2 id="upload-assets-e-g-pdfs-optional-">Upload Assets, e.g. PDFs (optional):</h2>
+<screenshot src="case-studies-asset.png">
+    1. Select <strong>Select</strong> in <strong>Asset</strong> section and navigate to <strong>Resources &gt; Case Studies</strong>
+</screenshot>
+
+<screenshot src="case-studies-upload-1.png">
+    2. If the company for your case study already exists, navigate to that folder. Otherwise, create a new folder in all caps by selecting <strong>Add &gt; Subfolder</strong>.
+</screenshot>
+
+<screenshot src="case-studies-upload-2.png">
+    3. In that folder, select Add &gt; Basic Document and upload your asset. No categorization is necessary. Click <strong>Publish</strong> when done uploading asset.
+</screenshot>
+
+<screenshot src="case-studies-upload-3.png">
+    4. Choose the asset
+</screenshot>
+
+<h2 id="company-logo-for-case-study">Company Logo for Case Study</h2>
+<p>If you need a logo for the case study, create a ticket for Design to provide one. Here are some guidelines for working with the Design team:</p>
+<ul>
+    <li>Please get an SVG or PNG, whichever will have a smaller size.</li>
+    <li>Request logo be size of 226x64 or view box size of 0 0 226 64</li>
+</ul>
+<h2 id="making-logos-visible-on-resources-page">Making Logos Visible on Resources Page</h2>
+<p>To make Case Study logos visible on the Resources page, check the box <strong>Featured</strong> when editing/adding a case study.</p>
+<h2 id="setting-a-screenshot-to-be-main-image">Setting a Screenshot to Be Main Image</h2>
+<screenshot src="case-studies-additional.png">
+    To have a screenshot featured on the case study page instead of the company logo, specify the image in the section <strong>Additional Image</strong>.
+</screenshot>
+
+<h2 id="case-studies-with-videos">Case Studies with Videos</h2>
+<screenshot src="case-studies-video.png">
+    If the case study has a video, add the YouTube link to the field <strong>Case Study Video URL ID</strong>.
+</screenshot>
+
+<h2 id="finishing-up">Finishing Up</h2>
+<screenshot src="case-studies-publish.png">
+    When everything is done in the steps above, hit publish.
+</screenshot>
+
+<h2 id="gated-case-studies">Gated Case Studies</h2>
+<p>Currently, all case studies younger than 90 days old will be gated. Gated meaning that users have to fill out a form in order to access the case study.</p>
+<p>Case studies older than 90 days will not have a gate.</p>
+<screenshot src="case-studies-gated.png">
+    To set teaser content for gated Case Studies, fill out the section &quot;Gated Teaser Content&quot;.
+</screenshot>
+
+<h2 id="removing-case-studies">Removing Case Studies</h2>
+<p>To remove case studies:</p>
+<ol>
+    <li>Delete the web content associated with case study by putting it in the recycle bin.</li>
+    <li>Delete the folder in Documents and all assets associated with case study</li>
+</ol>
+
+<h1 id="localization">Localization</h1>
+<blockquote>
+    <p>Adding translations to web content is easier than ever with Live Edit.</p>
+</blockquote>
+<h2 id="intro-and-screencast">Intro and Screencast</h2>
+<p>There are two ways to localize content on Liferay.com: 1) Live edit 2) Through Web Content Editor</p>
+<p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Lnpeg95ahp4" frameborder="0" allowfullscreen></iframe>
+    <em>Watch</em>: Web Team explains the two different ways to make translation changes to any web content.</p>
+<h2 id="translating-through-live-edit">Translating Through Live Edit</h2>
+<p>6.2 allows for Live Edit capabilities where you click on the text you want to change, make the change, click save, and you’re done.</p>
+<p><em>Note: You need a modern browser to leverage this feature i.e. no Internet Explorer</em> 
+</p>
+<p>How to Live Edit:</p>
+<ol>
+    <li>Login</li>
+</ol>
+<screenshot src="localization-1.png">
+    2. Select your localization
+</screenshot>
+
+<screenshot src="localization-2.png">
+    3. Make sure the Edit Controls button is Green and active.
+</screenshot>
+
+<screenshot src="localization-3.png">
+    4. Click on the text and highlight. Replace text with your translated copy.
+</screenshot>
+
+<screenshot src="localization-4.png">
+    5. Click the save button
+</screenshot>
+
+<h2 id="translating-through-web-content-editor">Translating Through Web Content Editor</h2>
+<p>Sometimes, there are sections that aren&#39;t Live-editable. You&#39;ll have to go through the web content editor.</p>
+<p>How to translate through web content editor:</p>
+<ol>
+    <li>Login</li>
+</ol>
+<screenshot src="localization-web-content-1.png">
+    2. Find the content you&#39;re looking for and hit &quot;edit&quot;
+</screenshot>
+
+<screenshot src="localization-web-content-2.png">
+    3. Click Add Translation (or if there is your translation already there, select it)
+</screenshot>
+
+<screenshot src="localization-web-content-3.png">
+    4. It will open a new window with the current web content&#39;s translation. Find the text you need to translate and replace with your translated copy.
+</screenshot>
+
+<screenshot src="localization-web-content-save.png">
+    5. When done replacing proper translation, click Save. The window will close.
+</screenshot>
+
+<screenshot src="localization-publish.png">
+    5. Click Publish.
+</screenshot>
+<h1 id="press-releases">Press Releases</h1>
+<blockquote>
+    <p>Create a press release for Liferay.com quickly with Web Team&#39;s press release structures.</p>
+</blockquote>
+<p>Make sure you are <a href="https://www.liferay.com/c/portal/login?p_l_id=10814" target="_blank">logged in</a> and head to the control panel.</p>
+<h2 id="creating-a-new-press-release">Creating a New Press Release</h2>
+<screenshot src="press-release-1.png">
+    1. In Control Panel, go to Web Content: Home &gt; COMPANY &gt; PRESS RELEASES.
+</screenshot>
+
+<screenshot src="press-release-2.png">
+    2. Create a new &quot;Press Release&quot; web content by clicking Add &gt; Press Release.
+</screenshot>
+
+<screenshot src="press-release-3.png">
+    3. Fill out information for the press release:
+
+    <ul>
+        <li><strong>Title</strong> - The title that will display on the press releases page.</li>
+        <li><strong>Heading</strong> - Field that will be displayed on the press release page (e.g. <a href="https://www.liferay.com/press-release/ariadne-becomes-liferay-platinum-partner-in-italy">https://www.liferay.com/press-release/ariadne-becomes-liferay-platinum-partner-in-italy</a>).</li>
+        <li><strong>Subheading</strong>  <em>(optional)</em> 
+        </li>
+        <li><strong>Content</strong> - Press release body</li>
+        <li><strong>Additional About Content</strong>  <em>(optional)</em>
+        </li>
+        <li><strong>Contact Info</strong>  <em>(optional)</em>
+        </li>
+    </ul>
+</screenshot>
+
+<screenshot src="press-release-4.png">
+    4. Categorize the press release. Go to the Categorization section and complete the following:
+
+    <ul>
+        <li><strong>Type</strong> - Press Release</li>
+        <li><strong>Locations</strong>
+        </li>
+        <li><strong>News Types</strong>
+        </li>
+        <li><strong>Year</strong>
+        </li>
+    </ul>
+</screenshot>
+
+<screenshot src="press-release-5.png">
+    5. Optionally, schedule the press release for a future date from the Schedule section. Note: Display date and time are PST.
+</screenshot>
+
+<screenshot src="press-release-publish.png">
+    6. Click <strong>Publish</strong>.
+</screenshot>
+
+<h1 id="testing-environment">Testing Environment</h1>
+<blockquote>
+    <p>There are times when we want to make changes to the website but are hesitant to cause unintended changes. Having a testing environment allows us to preview the changes before we apply them on production.</p>
+</blockquote>
+<h2 id="what-is-uat-">What Is UAT?</h2>
+<p>UAT is our testing environment for liferay.com. It looks identical to the live site, but the changes made here will not be reflected on liferay.com. This makes it ideal for practicing content updates and experimenting with areas of the site.</p>
+<h2 id="accessing-uat">Accessing UAT</h2>
+<ol>
+    <li>To access UAT, simply follow the URL:
+        <a href="www-uat.liferay.com">www-uat.liferay.com</a>
+    </li>
+</ol>
+<screenshot src="uat-sign-in.png">
+    2. Sign in using your Liferay email address. Remember to add <code>.broken</code> at the end.
+</screenshot>
+
+<p>For example, Joe Bloggs would sign in with</p>
+<pre><code>User Name: joe.bloggs@liferay.com.broken
+Password: [Please ask the web team for the password.]
+</code></pre>
+<h2 id="accessing-uat-off-site">Accessing UAT Off-Site</h2>
+<p>For security reasons, accessing <a href="www-uat.liferay.com">UAT</a> off-site requires an extra step of authentication.</p>
+<screenshot src="uat-authenticate-offsite.png">
+    When you go to <a href="www-uat.liferay.com">UAT</a>, you will be prompted to enter your Liferay username and password to verify your identity.
+</screenshot>
+
+<p>For example, Joe Bloggs would authenticate with:</p>
+<pre><code>User Name: joe.bloggs
+Password: [Joe Bloggs&#39; Liferay password]
+</code></pre>
+<p>To avoid authentication before accessing <a href="www-uat.liferay.com">UAT</a>, connect to Liferay&#39;s server room using VPN.</p>
+<p>To set up VPN, please contact IT for instructions.</p>
+
+<h1 id="whitepapers">Whitepapers</h1>
+<h2 id="introduction">Introduction</h2>
+<p>When an asset is uploaded following these instructions, it will be displayed on the new resources page <code>/resources</code>.</p>
+<p>Note: presentations (recordings and slides) and webinars (recordings and slides) currently don&#39;t live on the resources page. It is on the roadmap, but will continue to live in the events site until then.</p>
+<p><em>This is a copy of the documentation that used to live on <a href="https://in.liferay.com/web/marketing/wiki/-/wiki/Main/How+to+Upload+Whitepapers+to+liferay.com">in.liferay.com</a></em>
+</p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="update-the-marcom-assets-metadata-doc">Update the Marcom Assets &amp; Metadata Doc</h3>
+<ol>
+    <li>Navigate to the MarCom Assets and Metadata doc.</li>
+    <li>If you cannot edit the doc, request editing rights by.
+        <ul>
+            <li>Instructions for requesting permissions can be found <a href="https://liferay.github.io/web-dev-lrdcom/#/docs/General~2Fpermissions#process-for-granting-user-roles">here</a>.</li>
+        </ul>
+    </li>
+    <li>Navigate to the &#39;Whitepapers and eBooks&#39; sheet.</li>
+    <li>If the doc you are uploading does not already exist on the sheet, add it as a new row to the bottom of the list. Fill out all the columns. If you have questions, there are notes in row 1.</li>
+</ol>
+<h3 id="upload-to-liferay-com">Upload to liferay.com</h3>
+<ol>
+    <li>Go to <a href="https://www.liferay.com">https://www.liferay.com</a>
+    </li>
+    <li>Login (in side menu)
+        <ul>
+            <li>If you do not see the toolbars or edit controls let Ryan Schuhler know and he can check your permissions.</li>
+        </ul>
+    </li>
+    <li>Go to Site Administration by either:
+        <ul>
+            <li>Clicking Admin &gt; Contentx</li>
+            <li>Or going to <a href="https://www.liferay.com/group/control_panel?doAsGroupId=10182&amp;controlPanelCategory=current_site.content">https://www.liferay.com/group/control_panel?doAsGroupId=10182&amp;controlPanelCategory=current_site.content</a>
+            </li>
+        </ul>
+    </li>
+    <li>In Site Administration, go to Documents and Media &gt; RESOURCES</li>
+    <li>Go into folder for your Resource Type</li>
+    <li>Add folder if it does not exist. Make sure it is in ALL CAPS (e.g. BUSINESS WHITEPAPERS)</li>
+    <li>Create new resource by clicking Add &gt; Resource Type (e.g. Whitepaper)
+        <ul>
+            <li><strong>Title</strong>
+                <ul>
+                    <li>Note that the title will be used to create the url (e.g. “What is a Portal” url will be “/resources/whitepapers/what-is-a-portal”, or &quot;Aufbau einer Plattform fuer einen nutzerzentrierten digitalen Arbeitsplatz&quot; becomes &quot;/Aufbau+einer+Plattform+fuer+einen+nutzerzentrierten+digitalen+Arbeitsplatz&quot;)</li>
+                    <li>Note that the title cannot contain any of the following characters: <code>: ? &#39; &quot; ¿</code>
+                    </li>
+                </ul>
+            </li>
+            <li>The <strong>Display Title</strong> field is the title that will be shown on the page. Feel free to use any of the previously restricted characters.</li>
+            <li>Fill in all applicable fields
+                <ul>
+                    <li><strong>Description</strong> - description that displays on the whitepaper&#39;s landing page.</li>
+                    <li><strong>Primary Buyer Stage</strong> (Required) - Controls how many points are rewarded leads for downloading the whitepaper. Can be used for content targeting in the future.</li>
+                    <li><strong>Primary Persona, Secondary Personas</strong> - Can be used for content targeting in the future.</li>
+                    <li><strong>Product Name</strong> - Can be used for content targeting in the future.</li>
+                    <li><strong>Language</strong> - Used to control the sorting order of resources on the resources overview page
+                        <ul>
+                            <li>Resources with the same language as the user&#39;s default language will be sorted to the top. After will be English language assets. Assets from the remaining languages will be hidden from display.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Open Graph Images</strong> - This is the image that is used in previews when the URL is shared on social media sites and chat applications. Add the URL of the image. To find the URL of an image in the Liferay document library,
+                        click &quot;Get URL.&quot; If you don&#39;t define an open graph image for this page, the page will use the default liferay.com image. A 1200x1200 px image is ideal but not required. Learn more.</li>
+                    <li><strong>Seo Description</strong> - This is the meta description. Reference the wiki article for best practices. If no meta description is defined, the landing page will have no meta description.</li>
+                    <li><strong>Seo Title</strong> - This is the page title. Reference the wiki article for best practices. If no page title is defined, the page will use the article title. This is not ideal when the document title has punctuation or special
+                        characters.</li>
+                </ul>
+            </li>
+            <li>Under the Categorization tab all of the following categories must be provided or the Whitepaper will not display on the Resources page.
+                <ul>
+                    <li><strong>Category List Filter:</strong> Resources</li>
+                    <li><strong>Industries</strong>
+                    </li>
+                    <li><strong>Language</strong>
+                    </li>
+                    <li><strong>Resource Type:</strong> i.e., Business Whitepapers or Technical Whitepapers</li>
+                </ul>
+            </li>
+            <li>Click Publish</li>
+        </ul>
+    </li>
+</ol>
+
+<h1 id="events-app">Events App</h1>
+<h2 id="front-menu-screen">Front / Menu Screen</h2>
+<p>Once an active event has been selected, the front / menu screen is shown. Depending on how the event is configured, the Event Connect feature may or may not be enabled.</p>
+<p>The following menu items are shown:</p>
+<ul>
+    <li>Agenda</li>
+    <li>Event Connect or Maps, if Event Connect disabled</li>
+    <li>Sponsors</li>
+    <li>Contacts</li>
+    <li>Maps or Activities, if Event Connect disabled</li>
+    <li>Gallery</li>
+</ul>
+<div class="screenshot-block">
+    Here is how the menu looks with EventConnect enabled:
+    <img src="dist/pages/assets/eventsapp_menu_eventconnect.png">
+</div>
+
+<div class="screenshot-block">
+    Here is how the menu looks with EventConnect disabled:
+    <img src="dist/pages/assets/eventsapp_menu_noeventconnect.png">
+</div>
+

@@ -18,7 +18,7 @@ Easy guides for content authors making changes to Liferay.com
 
 ## Creating/Updating Docs
 1. Make sure gulp is running. See [Setting Up](#setting-up).
-2. Make changes in `/documentation`
+2. Make changes in `/src`
 3. Add, commit, and push changes to git. 
  
 Changes should reflect on the live site in a few minutes.
@@ -27,31 +27,28 @@ Changes should reflect on the live site in a few minutes.
 
 To add images just use plain ol' HTML and put the images in the same directory as the file. `<img src="my-image-in-the-same-directory.jpg" />`
 
-**Screenshot Functionality**
+**Adding Screenshots**
 
-To leverage screenshot zooming feature, wrap your image and content in a div with class `screenshot-block`
+To leverage screenshot zooming feature, wrap your content in `screenshot` block with the `src` attribute as source of the image.
 
-E.g.
 ```
-<div class="screenshot-block">
-    <img src="case-studies-upload-3.png" />
+<screenshot src="case-studies-upload-3.png" />
     1. Log in to Lifereay
-</div>
+</screenshot>
 ```
 
 ## Writing Instructions and Guidelines
 
 **Instructions**
 
-1. Make a new .md file in the proper folder and write up your documentation there following our guidelines
-2. Submit to Liferay's copyrighters for readability 
-3. Push changes to GIT to see changes pushed to live site
-4. If change is significant Communicate with marketing stakeholders that a change has been made.
+1. Make a new `.md` file in the proper folder and write up your documentation there following our guidelines
+2. Send a PR to team member for peer-review and let them merge changes.
+
+If change is significant, Submit to Liferay's copyrighters for readability and then communicate with marketing stakeholders that a change has been made.
 
 **General Rules**
 
-1. Need an H1 for Title. Break up sections by H2. This ensures page title and sectioning is done accurately
+1. Need an `h1` for Title. Break up sections by `h2`. This ensures page title and sectioning is done accurately
 
 Great resources:
 - https://jacobian.org/writing/great-documentation/
->>>>>>> gh-pages/gh-pages

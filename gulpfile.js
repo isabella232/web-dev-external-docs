@@ -15,10 +15,10 @@ const sass = require('gulp-sass');
 
 // Compile SASS
 gulp.task('sass', function() {
-    return gulp.src('src/css/**/*.scss')
+    return gulp.src('dist/css/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(concat('app.min.css'))
-        .pipe(gulp.dest('src/'))
+        .pipe(gulp.dest('dist/'))
 });
 
 // Compile and minify js
@@ -43,52 +43,52 @@ gulp.task('scripts', function() {
             'node_modules/angular-scroll/angular-scroll.min.js',
 
             // our application
-            'src/app/app.module.js',
+            'dist/app/app.module.js',
 
             // application model
-            'src/app/models/app.models.js',
+            'dist/app/models/app.models.js',
 
             // application modules
-            'src/app/app.routes.js',
-            'src/app/services/stringUtils.js',
-            'src/app/app.config.js',
-            'src/app/directives/app.directives.js',
-            'src/app/filters/app.filters.js',
+            'dist/app/app.routes.js',
+            'dist/app/services/stringUtils.js',
+            'dist/app/app.config.js',
+            'dist/app/directives/app.directives.js',
+            'dist/app/filters/app.filters.js',
 
                 // navigation
-                'src/app/modules/nav/nav.module.js',
-                'src/app/modules/nav/nav.controller.js',
+                'dist/app/modules/nav/nav.module.js',
+                'dist/app/modules/nav/nav.controller.js',
 
                 // search
-                'src/app/modules/search/search.module.js',
-                'src/app/modules/search/search.controller.js',
+                'dist/app/modules/search/search.module.js',
+                'dist/app/modules/search/search.controller.js',
 
                 // page viewer
-                'src/app/modules/page-viewer/page-viewer.module.js',
-                'src/app/modules/page-viewer/page-viewer.model.js',
-                'src/app/modules/page-viewer/page-viewer.controller.js',
+                'dist/app/modules/page-viewer/page-viewer.module.js',
+                'dist/app/modules/page-viewer/page-viewer.model.js',
+                'dist/app/modules/page-viewer/page-viewer.controller.js',
 
                 // background
-                'src/app/modules/background/background.module.js',
-                'src/app/modules/background/background.controller.js',
+                'dist/app/modules/background/background.module.js',
+                'dist/app/modules/background/background.controller.js',
         ]
     )
     .pipe(concat('app.min.js'))
-    .pipe(gulp.dest('src/'));
+    .pipe(gulp.dest('dist/'));
 });
 
 // Build navigation
 gulp.task('buildNavigationIndex', function() {
     return gulp.src(
             [
-                'documentation/**/*.md',
-                '!src/pages/home.html',
-                '!src/pages/404.html',
-                '!documentation/_drafts/**/*'
+                'src/**/*.md',
+                '!dist/pages/home.html',
+                '!dist/pages/404.html',
+                '!src/_drafts/**/*'
             ]
         )
         .pipe(directoryMap({filename: 'docsTree.json'}))
-        .pipe(gulp.dest('src/app/models/'));
+        .pipe(gulp.dest('dist/app/models/'));
 });
 
 // Turn markdown files into HTML
@@ -97,13 +97,13 @@ gulp.task(
     function() {
         return gulp.src(
             [
-                'documentation/**/*.md',
-                '!/documentation/_drafts/**/*'
+                'src/**/*.md',
+                '!/src/_drafts/**/*'
             ])
-            .pipe(replace('img src="', 'img src="src/pages/assets/'))
+            .pipe(replace('img src="', 'img src="dist/pages/assets/'))
             .pipe(markdown())
             .pipe(prettify({indent_char: ' ', indent_size: 4}))
-            .pipe(gulp.dest('src/pages'));
+            .pipe(gulp.dest('dist/pages'));
     }
 );
 
@@ -113,13 +113,13 @@ gulp.task(
     function() {
         return gulp.src(
             [
-                'documentation/**/*.png',
-                'documentation/**/*.jpg',
-                'documentation/**/*.svg',
-                '!documentation/_drafts/**/*',
+                'src/**/*.png',
+                'src/**/*.jpg',
+                'src/**/*.svg',
+                '!src/_drafts/**/*',
             ])
         .pipe(flatten())
-        .pipe(gulp.dest('src/pages/assets/'))
+        .pipe(gulp.dest('dist/pages/assets/'))
     }
 );
 
@@ -137,13 +137,13 @@ gulp.task(
     function() {
         return gulp.src(
             [
-                'src/pages/**/*.html',
-                '!src/pages/home.html',
-                '!src/pages/404.html',
+                'dist/pages/**/*.html',
+                '!dist/pages/home.html',
+                '!dist/pages/404.html',
             ]
         )
         .pipe(concat('searchindex.html'))
-        .pipe(gulp.dest('src/app/modules/search/'));
+        .pipe(gulp.dest('dist/app/modules/search/'));
 });
 
 gulp.task(
@@ -175,7 +175,7 @@ gulp.task(
 
         // Watch .html files
         gulp.watch(
-            'src/**/*.html',
+            'dist/**/*.html',
             function(callback) {
                 runSequence(
                     'buildindex',
@@ -186,7 +186,7 @@ gulp.task(
 
         // Watch .js files
         gulp.watch(
-            'src/**/*.js',
+            'dist/**/*.js',
             function(callback) {
                 runSequence(
                    'scripts',
@@ -197,7 +197,7 @@ gulp.task(
 
         // Watch .scss files
         gulp.watch(
-            'src/**/*.scss',
+            'dist/**/*.scss',
             function(callback) {
                 runSequence(
                     'sass',
@@ -208,7 +208,7 @@ gulp.task(
 
         // Watch .md files
         gulp.watch(
-            'documentation/**/*.md',
+            'src/**/*.md',
             function(callback) {
                 runSequence(
                     'docs',

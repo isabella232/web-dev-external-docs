@@ -1,0 +1,111 @@
+<h1 id="creating-a-new-marketing-blog-entry">Creating a New Marketing Blog Entry</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Our new marketing blogs platform is here. Creating content for the world to see is as easy as ever. We&#39;ve utilized the built in Blogs Portlet for content creation. All the data is currently stored on our web.liferay.com instance but is displayed with
+    the latest and greatest styles on www.liferay.com. If you have any questions that aren&#39;t answered below, don&#39;t hesitate to contact the web team.</p>
+<h2 id="preparation">Preparation</h2>
+<h3 id="image-guidelines">Image Guidelines</h3>
+<p>What size, resolution and file types should your images be?</p>
+<ul>
+    <li>Image <strong>size</strong> should be no larger than 200kb.</li>
+    <li><strong>Resolution</strong> may vary, but should adhere to the following:
+        <ul>
+            <li>Cover images, which appear as featured post header backgrounds on blog category pages should be 16:9 or 4:3 (i.e., 1280x800).</li>
+            <li>Images appearing within a blog post may vary, but should be between 640px to 980px wide.</li>
+        </ul>
+    </li>
+    <li><strong>File types</strong> should adhere to the following:
+        <ul>
+            <li>JPG: in most cases an optimized jpg should be used for images with millions of colors including photographs and graphics with a variety of shades and gradients.</li>
+            <li>GIF/PNG: best for line art/cartoon-like graphics and images with transparent backgrounds.</li>
+        </ul>
+    </li>
+</ul>
+<h3 id="resources">Resources</h3>
+<ul>
+    <li>image resizing: <a href="http://birme.net/">birme.net</a>
+    </li>
+    <li>optimizing: <a href="https://tinyjpg.com/">tinyjpg.com</a>
+    </li>
+    <li>image conversion: <a href="https://cloudconvert.com">cloudconvert.com</a>
+    </li>
+</ul>
+<h3 id="where-do-i-store-my-images-">Where do I store my images?</h3>
+<p>Upload blog images to <a href="https://web.liferay.com/group/control_panel/manage?p_p_id=20&amp;p_p_lifecycle=0&amp;p_p_state=maximized&amp;p_p_mode=view&amp;doAsGroupId=14&amp;_20_struts_action=%2Fdocument_library%2Fview&amp;_20_folderId=88321876">web.liferay.com</a> Documents
+    &amp; Media in the <code>/Blogs</code> folder.</p>
+<p>Navigating to the Blogs folder is easy from /marketing-blogs-admin. Go To &gt; Control Panel &gt; Documents and Media</p>
+<h2 id="creating-a-blog-entry">Creating a Blog Entry</h2>
+<ol>
+    <li>Navigate to the <a href="https://web.liferay.com/marketing-blogs-admin">Marketing Blogs Admin</a> page.
+        <ul>
+            <li>For practicing, please use the <a href="https://web-uat.liferay.com/marketing-blogs-admin">UAT Marketing Blogs Admin</a> page on our User Acceptance Testing (UAT) environment.</li>
+        </ul>
+    </li>
+    <li>Select &quot;Add New Entry.&quot; If you don&#39;t see the button you probably don&#39;t have the correct permissions. Find out how to request them <a href="https://liferay.github.io/web-dev-lrdcom/#/docs/General~2Fpermissions">here</a>.</li>
+    <li>Fill in the Title and Content (see &quot;Editing Content&quot; for more information on editing content).</li>
+    <li>Select an option for the &quot;Marketing Blogs&quot; category (Digital Business, Digital Transformation, etc.). Only choose one (see &quot;Important Notes&quot; section).
+        <ul>
+            <li>If you do not see the category you are looking for please contact someone from web team and we can add it for you. Depending on our current workload, you may be asked to open a JIRA ticket.</li>
+        </ul>
+    </li>
+    <li>Publish your new blog.</li>
+</ol>
+<h2 id="viewing-a-blog-entry">Viewing a Blog Entry</h2>
+<ol>
+    <li>To view your new creation in all its glory, visit <code>www.liferay.com/blog/{region}/{category}/{your-new-blog-title-hyphenated}</code>
+        <ul>
+            <li>For practice blogs use <code>wwww-uat.liferay.com/{region}/{category}/{your-new-blog-title-hyphenated}</code>
+            </li>
+            <li>Example: www.liferay.com/blog/en-us/customer-experience/we-ve-only-just-begun-
+                <ul>
+                    <li>region: en-us</li>
+                    <li>category: customer-experience</li>
+                    <li>blog url title: we-ve-only-just-begun- (&quot;We&#39;ve Only Just Begun!&quot;)
+                        <br>Note: punctuation in the blog title will be replaced with a hyphen in the url title</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ol>
+<h2 id="editing-content">Editing Content</h2>
+<ul>
+    <li>For information on how to add a blog entry, please see the <a href="https://dev.liferay.com/discover/portal/-/knowledge_base/6-1/expressing-yourself-using-blogs#adding-blog-entries">Liferay Documentation</a> on adding a blog entry.</li>
+    <li>To add an image to your blog entry:
+        <ul>
+            <li>
+                <screenshot src="add-image.png">Select the &quot;Image&quot; button on the editor.</screenshot>
+            </li>
+            <li>
+                <screenshot src="image-url.png">Paste the full URL of the desired image into the URL field of the pop-up.</screenshot>
+            </li>
+            <li>
+                <screenshot src="save-img.png">Select &quot;Ok.&quot;</screenshot>
+            </li>
+        </ul>
+    </li>
+    <li>Upload images to web.liferay.com Documents &amp; Media in the <code>/Blogs</code> folder.
+        <ul>
+            <li>Navigating to the Blogs folder is easy from /marketing-blogs-admin. Go To &gt; Control Panel &gt; Documents and Media</li>
+        </ul>
+    </li>
+    <li>Avoid using the copy/paste functionality to add content to your blog entry. Only use it if you are copying plain text (from a .txt file) exclusively.</li>
+    <li>When adding a table, please solicit the help of a webteam member.</li>
+</ul>
+<h2 id="blog-category-topic-seo-information">Blog Category/Topic SEO Information</h2>
+<p>To populate SEO information for both Blog Categories and Topics:</p>
+<ul>
+    <li>Go to Category section in Control Panel</li>
+    <li>Go to &quot;Marketing Blogs&quot; Category</li>
+    <li>
+        <screenshot src="seo-category.png">Within the category you want to alter the description for, select the category, then hit add a category property by hitting &quot;Edit&quot;</screenshot>
+    </li>
+    <li>
+        <screenshot src="seo-category-description.png">Property Key: <code>description</code>.
+            <br/>Property Value: <code>[Enter the category description]</code>
+        </screenshot>
+    </li>
+    <li>Hit Save</li>
+</ul>
+<h2 id="important-notes">Important Notes</h2>
+<screenshot src="dont-choose-parent.png">
+    When selecting an option for &quot;Marketing Blogs&quot; <strong>make sure the parent folders of the category you choose are not selected.</strong>
+</screenshot>
